@@ -1,0 +1,41 @@
+server:
+  port: 5555
+  tomcat:
+    accesslog:
+      enabled: true
+  error:
+    whitelabel:
+      enabled: false
+spring: 
+  application: 
+    name: zuul-gateway
+eureka: 
+  client: 
+    serviceUrl:
+      defaultZone: http://user:8888@192.168.0.31:8761/eureka
+    healthcheck:
+      enable: true
+  instance:
+    prefer-ip-address: true
+    instanceId: ${spring.application.name}:${server.port}
+zuul:
+  host:
+    connect-timeout-millis: 10000
+    socket-timeout-millis: 60000
+  routes:
+    api-a: #服务动态路由映射
+      path: /demo/**
+      serviceId: demo
+    api-b:
+      path: /api/v1/action/**
+      serviceId: action
+    api-c:
+      path: /sms/**
+      serviceId: sms
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 60000
