@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: demo
+eureka:
+  client:
+    healthcheck:
+      enable: true
+    serviceUrl:
+      defaultZone: http://user:8888@192.168.220.96:8761/eureka
+  instance:
+    metadataMap:
+      instanceId: ${spring.application.name}:${server.port}
+    preferIpAddress: true
+redis:
+  host: 127.0.0.1
+  port: 6379
+logging:
+  level:
+    root: info
+server:
+  port: 8081
+testaaa:
+  testbbb:
+    testccc: ttttt
+endpoints:
+  restart:
+    enabled: true
