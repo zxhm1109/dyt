@@ -32,6 +32,9 @@ zuul:
     api-c:
       path: /sms/**
       serviceId: sms
+    api-d:
+      path: /together/**
+      serviceId: together
 hystrix:
   command:
     default:
