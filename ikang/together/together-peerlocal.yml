@@ -25,6 +25,8 @@ spring:
     data: classpath*:database/dml/*-peerlocal.sql
   application:
     name: together
+  cache:
+    type: redis
 eureka:
   client:
     healthcheck:
@@ -41,6 +43,10 @@ redis:
 logging:
   level:
     root: info
+    com:
+      ikang:
+        mybatis:
+          mapper: debug
 server:
   port: 9200
 mybatis:
