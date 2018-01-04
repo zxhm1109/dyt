@@ -44,3 +44,5 @@ server:
 mybatis:
   mapper-locations: classpath*:config/mybatis/mapper/*.xml
   type-aliases-package: com.ikang.together.entity
+together:
+  getUserOrder: http://192.168.220.96:5555/together/user/order
