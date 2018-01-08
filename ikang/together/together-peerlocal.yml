@@ -54,4 +54,3 @@ mybatis:
   type-aliases-package: com.ikang.together.entity
 together:
   getUserOrder: http://192.168.220.96:5555/together/user/order
-aaa: tttt
