@@ -2,7 +2,7 @@ unwork:
   year: 2018
   excludeWeekDay:
   - day: 04-07
-    desc: 清明节调换工作
+    desc: 清明节调换工作日
   - day: 04-28
     desc: 劳动节调换工作日
   holidays:
