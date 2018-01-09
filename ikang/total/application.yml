@@ -20,9 +20,8 @@ unwork:
     desc: 中秋节休假
   - day: 10-01|10-02|10-03|10-04|10-05|10-06|10-07
     desc: 国庆节休假
-   
-access:
-  together:
-    service:
+access: 
+  together: 
+    service: 
       order: http://192.168.220.105:8080/together/order/list
       patient: http://192.168.220.105:8080/together/patient/list
