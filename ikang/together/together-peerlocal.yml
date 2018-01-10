@@ -24,7 +24,7 @@ spring:
     schema: classpath*:database/ddl/*-peerlocal.sql
     data: classpath*:database/dml/*-peerlocal.sql
   application:
-    name: together
+    name: together-dev
   cache:
     type: redis
 eureka:
