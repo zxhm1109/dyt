@@ -23,5 +23,5 @@ unwork:
 access: 
   together: 
     service: 
-      order: http://192.168.220.105:8080/together/order/list
-      patient: http://192.168.220.105:8080/together/patient/list
+      order: http://api.uat.daoyitong.com:88/access/together/order/list
+      patient: http://api.uat.daoyitong.com:88/access/together/patient/list
