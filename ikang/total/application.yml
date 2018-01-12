@@ -23,6 +23,6 @@ unwork:
 access: 
   together: 
     service: 
-      order: http://api.uat.daoyitong.com:88/access/together/order/list
-      patient: http://api.uat.daoyitong.com:88/access/together/patient/list
-      finance: http://api.uat.daoyitong.com:88/access/together/finance/recharge
+      order: http://api.uat.daoyitong.com:88/pavo-access/together/order/list
+      patient: http://api.uat.daoyitong.com:88/pavo-access/together/patient/list
+      finance: http://api.uat.daoyitong.com:88/pavo-access/together/finance/recharge
