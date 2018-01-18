@@ -61,3 +61,6 @@ access:
       finance: http://api.daoyitong.com/pavo-access/together/finance/recharge
     img: 
       order: http://img.daoyitong.com/together/accompany_order_img@3x.png
+staticResource:
+  url: http://img.daoyitong.com/together/
+  uploadPath: /data/uploads/together
