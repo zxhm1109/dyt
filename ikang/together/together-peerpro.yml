@@ -58,6 +58,7 @@ access:
     service: 
       order: http://api.daoyitong.com/pavo-access/together/order/list
       patient: http://api.daoyitong.com/pavo-access/together/patient/list
+      phoneNo: http://api.daoyitong.com/pavo-access/together/patient/phoneNo
       finance: http://api.daoyitong.com/pavo-access/together/finance/recharge
     img: 
       order: http://img.daoyitong.com/together/accompany_order_img@3x.png
