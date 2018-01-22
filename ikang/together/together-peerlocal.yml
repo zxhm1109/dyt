@@ -26,7 +26,7 @@ spring:
   application:
     name: together-dev
   cache:
-    type: redis
+    type: guava
 eureka:
   client:
     healthcheck:
