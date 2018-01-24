@@ -1,0 +1,67 @@
+spring:
+  redis:
+    host: dyt-redis.ikang.com
+    port: 6379
+    pool:  
+      max-active: 8  
+      max-idle: 8  
+      min-idle: 0  
+      max-wait: -1
+  datasource:
+    url: jdbc:mysql://db.dyt.ikang.com:3306/pavo_together?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&autoReconnect=true&failOverReadOnly=false&maxReconnects=10
+    data-source-class-name: com.mysql.jdbc.Driver
+    username: daoyitong
+    password: pavo_daoyitong!@$
+    initial-size: 10
+    maximum-pool-size: 300
+    max-idle: 30
+    min-idle: 2
+    max-wait: 60000
+    max-active: 1000
+    connection-test-query: select 1
+    validation-interval: 30000
+    validation-query: select 1
+    time-between-eviction-runs-millis: 3600000
+    min-evictable-idle-time-millis: 18000000
+    default-read-only: false
+    test-on-borrow: true
+    test-on-return: true
+    test-while-idle: true
+    read-only: true
+    jdbc-interceptors: org.apache.tomcat.jdbc.pool.interceptor.ConnectionState;org.apache.tomcat.jdbc.pool.interceptor.StatementFinalizer
+    schema: classpath*:database/ddl/*-peerpro.sql
+    data: classpath*:database/dml/*-peerpro.sql
+  application:
+    name: together
+eureka:
+  client:
+    healthcheck:
+      enable: true
+    serviceUrl:
+      defaultZone: http://user:8888@192.168.0.12:8761/eureka,http://user:8888@192.168.0.13:8761/eureka，http://user:8888@192.168.0.14:8761/eureka
+  instance:
+    metadataMap:
+      instanceId: ${spring.application.name}:${server.port}
+    preferIpAddress: true
+logging:
+  level:
+    root: info
+server:
+  port: 9200
+mybatis:
+  mapper-locations: classpath*:config/mybatis/mapper/*.xml
+  type-aliases-package: com.ikang.together.entity
+together:
+  getUserOrder: qqqq
+access: 
+  together: 
+    service: 
+      order: http://new-api.daoyitong.com/pavo-access/together/order/list
+      patient: http://new-api.daoyitong.com/pavo-access/together/patient/list
+      phoneNo: http://new-api.daoyitong.com/pavo-access/together/patient/phoneNo
+      finance: http://new-api.daoyitong.com/pavo-access/together/finance/recharge
+    img: 
+      order: http://img.daoyitong.com/together/accompany_order_img@3x.png
+staticResource:
+  url: http://img.daoyitong.com/together/
+  uploadPath: /data/uploads/together
