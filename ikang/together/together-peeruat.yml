@@ -51,5 +51,5 @@ mybatis:
 together:
   getUserOrder: http://192.168.220.96:5555/together/user/order
 staticResource:
-  url: http://static.uat.daoyitong.com:88/
+  url: http://static.uat.daoyitong.com/
   uploadPath: /home/jason.wu/img-upload
