@@ -54,6 +54,13 @@ mybatis:
   type-aliases-package: com.ikang.together.entity
 together:
   getUserOrder: http://192.168.220.96:5555/together/user/order
+access: 
+  together: 
+    service: 
+      order: http://api.daoyitong.com/pavo-access/together/order/list
+      patient: http://api.daoyitong.com/pavo-access/together/patient/list
+      phoneNo: http://api.daoyitong.com/pavo-access/together/patient/phoneNo
+      finance: http://api.daoyitong.com/pavo-access/together/finance/recharge
 staticResource:
   url: http://static.uat.daoyitong.com:88/
   uploadPath: /home/jason.wu/img-upload
