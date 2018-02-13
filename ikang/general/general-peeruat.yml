@@ -26,10 +26,8 @@ endpoints:
 zuul:
   url: http://192.168.220.96:5555 #zuul地址，用以restTemplate调用
 service:
-  demo: demo #serviceName
-hosp:
-  renjixi:
-    GetDeptInfo: ${zuul.url}/${service.demo}/v1/getDeptInfo #加载科室
+  demo: demo #serviceName  
 invoke:
   demo:
     FuGaoOutpatientInfo: ${zuul.url}/${service.demo}/v1/FuGaoOutpatientInfo #具体的调用url
+    GetDeptInfo: ${zuul.url}/${service.demo}/v1/getDeptInfo #加载科室
