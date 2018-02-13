@@ -30,5 +30,5 @@ service:
 invoke:
   demo:
     FuGaoOutpatientInfo: ${zuul.url}/${service.demo}/v1/FuGaoOutpatientInfo #erTong加载科室
-    FuGaoOutDoctorInfo: ${zuul.url}/${service.demo}/v1/FuGaoOutDoctorInfo #erTong加载某科室的所有医生
+    FuGaoOutDoctorInfo: ${zuul.url}/${service.demo}/v1/FuGaoOutDoctorInfo?MZDM={MZDM} #erTong加载某科室的所有医生
     GetDeptInfo: ${zuul.url}/${service.demo}/v1/getDeptInfo #加载科室
