@@ -36,3 +36,4 @@ invoke:
     getSrvGroup: ${zuul.url}/${service.demo}/v1/getSrvGroup?identifyID=FCD8EF688A02518AC7C27A22292CDC64&districtID=1&bookingTypeID={bookingTypeID}
     
     GetDeptInfo: ${zuul.url}/${service.demo}/v1/getDeptInfo #加载科室
+    GetItemInfo: ${zuul.url}/${service.demo}/v1/getItemInfo #加载所有医生
