@@ -39,4 +39,4 @@ invoke:
     GetItemInfo: ${zuul.url}/${service.demo}/v1/getItemInfo #加载所有医生
     GetPlanInfo: ${zuul.url}/${service.demo}/v1/getPlanItem?fromDate={fromDate}&toDate={toDate} #获取出诊项目
     
-    GetJiuyInfo: ${zuul.url}/${service.demo}/v1/departmentList
+    GetJiuyInfo: ${zuul.url}/${service.demo}/v1/departmentList 
