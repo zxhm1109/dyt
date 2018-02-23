@@ -40,3 +40,4 @@ invoke:
     GetPlanInfo: ${zuul.url}/${service.demo}/v1/getPlanItem?fromDate={fromDate}&toDate={toDate} #获取出诊项目
 
     DepartmentList: ${zuul.url}/${service.demo}/v1/departmentList #加载科室
+    
