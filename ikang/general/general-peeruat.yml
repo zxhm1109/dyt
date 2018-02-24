@@ -29,7 +29,6 @@ service:
   demo: demo #serviceName
 invoke:
   demo:
-    aaa: ${zuul.url}/${service.demo}/v1/departmentList
     FuGaoOutpatientInfo: ${zuul.url}/${service.demo}/v1/FuGaoOutpatientInfo #erTong加载科室
     FuGaoOutDoctorInfo: ${zuul.url}/${service.demo}/v1/FuGaoOutDoctorInfo?MZDM={MZDM} #erTong加载某科室的所有医生
     FuGaoGetPreResources: ${zuul.url}/${service.demo}/v1/FuGaoGetPreResources?KSDM={KSDM}&YSGH={YSGH}&KSRQ={KSRQ}&JSRQ={JSRQ}
