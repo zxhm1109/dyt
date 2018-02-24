@@ -40,7 +40,3 @@ invoke:
     GetPlanInfo: ${zuul.url}/${service.demo}/v1/getPlanItem?fromDate={fromDate}&toDate={toDate} #获取出诊项目
     
     DepartmentList: ${zuul.url}/${service.demo}/v1/departmentList #zhongliu加载科室
-    
-    GetZhongRiDepInfo: ${zuul.url}/${service.demo}/v1/getDepartmentInfo #加载所有科室
-    GetZhongRiDocInfo: ${zuul.url}/${service.demo}/v1/getdoctorInfo #加载所有医生
-    GetZhongRiResource: ${zuul.url}/${service.demo}/v1/getResource?DateBegin={DateBegin}&DateEnd={DateEnd} #加载所有号源
