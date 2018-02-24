@@ -37,5 +37,5 @@ invoke:
     
     GetDeptInfo: ${zuul.url}/${service.demo}/v1/getDeptInfo #加载科室
     GetItemInfo: ${zuul.url}/${service.demo}/v1/getItemInfo #加载所有医生
-    GetJiuyInfo: ${zuul.url}/${service.demo}/v1/departmentList #加载所有科室
+    GetJiuyInfo: ${zuul.url}/${service.demo}/v1/departmentList
     GetPlanInfo: ${zuul.url}/${service.demo}/v1/getPlanItem?fromDate={fromDate}&toDate={toDate} #获取出诊项目
