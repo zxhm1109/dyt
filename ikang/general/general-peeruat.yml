@@ -44,3 +44,7 @@ invoke:
     GetZhongRiDepInfo: ${zuul.url}/${service.demo}/v1/getDepartmentInfo #zhongri加载所有科室
     GetZhongRiDocInfo: ${zuul.url}/${service.demo}/v1/getdoctorInfo #zhongri加载所有医生
     GetZhongRiResource: ${zuul.url}/${service.demo}/v1/getResource?DateBegin={DateBegin}&DateEnd={DateEnd} #zhongri加载所有号源
+    
+    GetJingAnDepInfo: ${zuul.url}/${service.demo}/v1/getDepartment #jingan加载所有科室
+    GetJingAnDocInfo: ${zuul.url}/${service.demo}/v1/getDoctor #jingan加载所有医生
+    GetJingAnResource: ${zuul.url}/${service.demo}/v1/getResourceInfo?ksdm={ksdm}&beginDate={beginDate}&endDate={endDate} #jingan加载号源
