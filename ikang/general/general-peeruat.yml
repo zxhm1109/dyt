@@ -42,10 +42,11 @@ invoke:
 
     DepartmentList: ${zuul.url}/${service.demo}/v1/departmentList #zhongliu加载科室
     ExpertList: ${zuul.url}/${service.demo}/v1/expertList #zhongliu加载专家
+    ArrangelistByNumber: ${zuul.url}/${service.demo}/v1/arrangelistByNumber?fromDate={fromDate}&toDate={toDate} #zhongliu加载专家
 
     GetZhongRiDepInfo: ${zuul.url}/${service.demo}/v1/getDepartmentInfo #zhongri加载所有科室
     GetZhongRiDocInfo: ${zuul.url}/${service.demo}/v1/getdoctorInfo #zhongri加载所有医生
-    GetZhongRiResource: ${zuul.url}/${service.demo}/v1/getResource?DateBegin={DateBegin}&DateEnd={DateEnd} #zhongri加载所有号源
+    GetZhongRiResource: ${zuul.url}/${service.demo}/v1/getResource?bookingDate={bookingDate}&doctorId={doctorId} #jiuyuan加载排班
     
     GetJingAnDepInfo: ${zuul.url}/${service.demo}/v1/getDepartment #jingan加载所有科室
     GetJingAnDocInfo: ${zuul.url}/${service.demo}/v1/getDoctor #jingan加载所有医生
