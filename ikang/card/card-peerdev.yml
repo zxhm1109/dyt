@@ -39,6 +39,10 @@ redis:
 logging:
   level:
     root: info
+    com:
+      ikang:
+        mybatis:
+          mapper: debug
 server:
   port: 9400
 mybatis:
