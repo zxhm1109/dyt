@@ -51,3 +51,7 @@ invoke:
     GetJingAnDepInfo: ${zuul.url}/${service.demo}/v1/getDepartment #jingan加载所有科室
     GetJingAnDocInfo: ${zuul.url}/${service.demo}/v1/getDoctor #jingan加载所有医生
     GetJingAnResource: ${zuul.url}/${service.demo}/v1/getResourceInfo?ksdm={ksdm}&beginDate={beginDate}&endDate={endDate} #jingan加载号源
+    
+    GetYueYangDepInfo: ${zuul.url}/${service.demo}/v1/schedule/departments #yueyang加载所有科室
+    GetYueYangDocInfo: ${zuul.url}/${service.demo}/v1/schedule/advanceExpertQuery #yueyang加载所有医生
+    GetYueYangResource: ${zuul.url}/${service.demo}/v1/schedule/department/experts?registerType={registerType}&deptCode={deptCode}&status={status}&vendor={vendor} #yueyang加载号源
