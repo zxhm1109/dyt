@@ -39,7 +39,7 @@ zuul:
       path: /card/**
       serviceId: card
     api-f:
-      path: /goods/**
+      path: /cloud/goods/**
       serviceId: goods
 hystrix:
   command:
