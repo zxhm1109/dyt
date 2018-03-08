@@ -35,6 +35,12 @@ zuul:
     api-d:
       path: /together/**
       serviceId: together
+    api-e:
+      path: /card/**
+      serviceId: card
+    api-f:
+      path: /goods/**
+      serviceId: goods
 hystrix:
   command:
     default:
