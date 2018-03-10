@@ -55,7 +55,7 @@ mybatis:
   type-aliases-package: com.ikang.card.entity
 cloud:
   goods:
-    getServiceByGoodId: http://192.168.220.210:5555/goods/getServiceByGoodsId
+    getServiceByGoodId: http://192.168.220.210:5555/goods/pc/admin/getServiceByGoodsId
     addgoods: http://192.168.220.210:5555/goods/card/add
 medicalservice:
   memberRights:
