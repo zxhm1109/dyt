@@ -1,9 +1,17 @@
 spring:
+  redis:
+    host: dev.redis.daoyitong.com
+    port: 6379
+    pool:  
+      max-active: 8  
+      max-idle: 8  
+      min-idle: 0  
+      max-wait: -1
   datasource:
-    url: jdbc:mysql://192.168.99.207/pavo_card?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&autoReconnect=true&failOverReadOnly=false&maxReconnects=10
+    url: jdbc:mysql://dev.mysql.daoyitong.com/pavo_card?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&autoReconnect=true&failOverReadOnly=false&maxReconnects=10
     data-source-class-name: com.mysql.jdbc.Driver
-    username: pavo
-    password: pavo
+    username: admin
+    password: dyt_mysql_456
     initial-size: 10
     maximum-pool-size: 300
     max-idle: 30
@@ -22,7 +30,7 @@ spring:
     read-only: true
     jdbc-interceptors: org.apache.tomcat.jdbc.pool.interceptor.ConnectionState;org.apache.tomcat.jdbc.pool.interceptor.StatementFinalizer
   application:
-    name: card
+    name: ldy-card
 eureka:
   client:
     healthcheck:
@@ -33,9 +41,6 @@ eureka:
     metadataMap:
       instanceId: ${spring.application.name}:${server.port}
     preferIpAddress: true
-redis:
-  host: 127.0.0.1
-  port: 6379
 logging:
   level:
     root: info
