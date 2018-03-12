@@ -56,7 +56,7 @@ mybatis:
 cloud:
   goods:
     getServiceByGoodId: http://192.168.220.210:5555/goods/getServiceByGoodsId
-    addgoods: http://192.168.220.210:5555/goods/card/add
+    addgoods: http://192.168.220.210:5555/goods/pc/admin/card/add
 medicalservice:
   memberRights:
     add: http://192.168.220.210:50303/memberRights/add
