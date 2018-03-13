@@ -60,3 +60,6 @@ cloud:
 medicalservice:
   memberRights:
     add: http://192.168.220.210:50303/memberRights/add
+rest:
+  msg:
+    listmsg: api-dev.daoyitong.com/api/v1/card/sendMsg
