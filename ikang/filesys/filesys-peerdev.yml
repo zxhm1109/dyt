@@ -1,6 +1,4 @@
 spring:
-  jmx:
-    default-domain: fastdfsjdd
   redis:
     host: dev.redis.daoyitong.com
     port: 6379
