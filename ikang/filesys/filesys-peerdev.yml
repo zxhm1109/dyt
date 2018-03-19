@@ -54,6 +54,7 @@ mybatis:
   mapper-locations: classpath*:config/mybatis/mapper/*.xml
   type-aliases-package: com.ikang.filesys.entity
 fdfs:
+  storageClientUrl: http://192.168.220.225:9999
   soTimeout: 1500
   connectTimeout: 600
   thumbImage:             #缩略图生成参数
