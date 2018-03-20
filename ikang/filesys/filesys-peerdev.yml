@@ -56,11 +56,11 @@ mybatis:
   mapper-locations: classpath*:config/mybatis/mapper/*.xml
   type-aliases-package: com.ikang.filesys.entity
 fdfs:
-  storageClientUrl: http://192.168.220.225:9999
+  storageClientUrl: http://192.168.220.96:9999
   soTimeout: 1500
   connectTimeout: 600
   thumbImage:             #缩略图生成参数
     width: 150
     height: 150
   trackerList:            #TrackerList参数,支持多个
-    - 192.168.220.119:22122
+    - 192.168.220.96:22122
