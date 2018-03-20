@@ -53,3 +53,7 @@ server:
 mybatis:
   mapper-locations: classpath*:config/mybatis/mapper/*.xml
   type-aliases-package: com.ikang.balance.entity
+access: 
+  together: 
+    service: 
+      finance: http://dev-api.daoyitong.com/pavo-access/together/finance/recharge
