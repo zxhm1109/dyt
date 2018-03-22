@@ -64,3 +64,9 @@ excel:
         cellhead: 基因检测模块
       - actionId: 7
         cellhead: 运动计步模块
+      - actionId: 8
+        cellhead: 健康商城模块
+      - actionId: 9
+        cellhead: 电话医生模块
+      - actionId: 10
+        cellhead: EXTRA服务模块
