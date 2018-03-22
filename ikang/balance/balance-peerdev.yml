@@ -57,3 +57,6 @@ access:
   together: 
     service: 
       finance: http://dev-api.daoyitong.com/pavo-access/together/finance/recharge
+order:
+  search:
+    byid: http://dev-api.daoyitong.com/api/v1/shop/order/list
