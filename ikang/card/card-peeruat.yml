@@ -1,9 +1,17 @@
 spring:
+  redis:
+    host: uat.redis.daoyitong.com:6379
+    port: 6379
+    pool:  
+      max-active: 8  
+      max-idle: 8  
+      min-idle: 0  
+      max-wait: -1
   datasource:
-    url: jdbc:mysql://192.168.99.207/pavo_card?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&autoReconnect=true&failOverReadOnly=false&maxReconnects=10
+    url: jdbc:mysql://uat.mysql.daoyitong.com:3306/pavo_card?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&autoReconnect=true&failOverReadOnly=false&maxReconnects=10
     data-source-class-name: com.mysql.jdbc.Driver
-    username: pavo
-    password: pavo
+    username: daoyitong
+    password: dyt_mysql_456
     initial-size: 10
     maximum-pool-size: 300
     max-idle: 30
@@ -21,6 +29,8 @@ spring:
     test-while-idle: true
     read-only: true
     jdbc-interceptors: org.apache.tomcat.jdbc.pool.interceptor.ConnectionState;org.apache.tomcat.jdbc.pool.interceptor.StatementFinalizer
+    schema: classpath*:database/ddl/*-uat.sql
+    data: classpath*:database/dml/*-uat.sql
   application:
     name: card
 eureka:
@@ -33,9 +43,6 @@ eureka:
     metadataMap:
       instanceId: ${spring.application.name}:${server.port}
     preferIpAddress: true
-redis:
-  host: 192.168.220.96
-  port: 6379
 logging:
   level:
     root: info
@@ -48,3 +55,18 @@ server:
 mybatis:
   mapper-locations: classpath*:config/mybatis/mapper/*.xml
   type-aliases-package: com.ikang.card.entity
+cloud:
+  balance:
+    recharge: http://192.168.220.96:5555/balance/recharge
+  goods:
+    getServiceByGoodsId: http://192.168.220.96:5555/goods/getServiceByGoodsId
+    addgoods: http://192.168.220.96:5555/goods/pc/admin/card/add
+medicalservice:
+  memberRights:
+    add: http://192.168.220.96:81/admin/memberRights/add
+rest:
+  msg:
+    listmsg: http://api.uat.daoyitong.com/api/v1/card/sendMsg
+admin:
+  account:
+    registeraccounts: http://192.168.220.96:81/admin/account/registerAccounts
