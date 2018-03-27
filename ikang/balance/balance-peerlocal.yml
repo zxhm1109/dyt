@@ -56,7 +56,7 @@ mybatis:
 access: 
   together: 
     service: 
-      finance: http://dev-api.daoyitong.com/pavo-access/together/finance/recharge
+      finance: http://api-dev.daoyitong.com/pavo-access/together/finance/recharge
 order:
   update:
     paydown: http://192.168.220.209:81/admin/shop/order/update
