@@ -65,3 +65,6 @@ medicalservice:
 rest:
   msg:
     listmsg: http://api-dev.daoyitong.com/api/v1/card/sendMsg
+admin:
+  account:
+    registeraccounts: http://192.168.220.209:81/admin/account/registerAccounts
