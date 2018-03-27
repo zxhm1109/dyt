@@ -31,6 +31,8 @@ spring:
     test-while-idle: true
     read-only: true
     jdbc-interceptors: org.apache.tomcat.jdbc.pool.interceptor.ConnectionState;org.apache.tomcat.jdbc.pool.interceptor.StatementFinalizer
+    schema: classpath*:database/ddl/*-uat.sql
+    data: classpath*:database/dml/*-uat.sql
   application:
     name: filesys
 eureka:
