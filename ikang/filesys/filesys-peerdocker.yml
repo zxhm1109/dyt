@@ -54,7 +54,7 @@ server:
   port: 9100
 mybatis:
   mapper-locations: classpath*:config/mybatis/mapper/*.xml
-  type-aliases-package: com.ikang.card.entity
+  type-aliases-package: com.ikang.filesys.entity
 fdfs:
   storageClientUrl: http://192.168.220.96:9999
   soTimeout: 1500
