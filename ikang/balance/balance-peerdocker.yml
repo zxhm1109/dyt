@@ -66,3 +66,6 @@ order:
     byid: http://api-dev.daoyitong.com/api/v1/shop/order/list
   refund:
     refundservice: http://api-dev.daoyitong.com/api/v1/refund/refundservice
+rest:
+  msg:
+    listmsg: http://api-dev.daoyitong.com/api/v1/card/sendMsg
