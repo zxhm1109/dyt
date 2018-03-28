@@ -13,7 +13,7 @@ eureka:
     preferIpAddress: true
 logging:
   level:
-    root: info
+    root: error
     com:
       ikang:
         mybatis:
