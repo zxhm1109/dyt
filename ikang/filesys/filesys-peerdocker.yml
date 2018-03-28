@@ -1,4 +1,6 @@
 spring:
+  jmx:
+    enabled: false
   redis:
     host: dev.redis.daoyitong.com
     port: 6379
