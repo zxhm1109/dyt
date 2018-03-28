@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: demo
+eureka:
+  client:
+    healthcheck:
+      enable: true
+    serviceUrl:
+      defaultZone: http://user:8888@localhost:8761/eureka
+  instance:
+    metadataMap:
+      instanceId: ${spring.application.name}:${server.port}
+    preferIpAddress: true
+logging:
+  level:
+    root: info
+    com:
+      ikang:
+        mybatis:
+          mapper: debug
+server:
+  port: 8071
