@@ -8,9 +8,9 @@ spring:
       min-idle: 0  
       max-wait: -1
   datasource:
-    url: jdbc:mysql://uat.mysql.daoyitong.com/pavo_card?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&autoReconnect=true&failOverReadOnly=false&maxReconnects=10
+    url: jdbc:mysql://dev.mysql.daoyitong.com/pavo_card?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&autoReconnect=true&failOverReadOnly=false&maxReconnects=10
     data-source-class-name: com.mysql.jdbc.Driver
-    username: daoyitong
+    username: admin
     password: dyt_mysql_456
     initial-size: 10
     maximum-pool-size: 300
@@ -36,7 +36,7 @@ eureka:
     healthcheck:
       enable: true
     serviceUrl:
-      defaultZone: http://user:8888@192.168.220.96:8761/eureka
+      defaultZone: http://user:8888@192.168.220.210:8761/eureka
   instance:
     metadataMap:
       instanceId: ${spring.application.name}:${server.port}
@@ -55,16 +55,16 @@ mybatis:
   type-aliases-package: com.ikang.card.entity
 cloud:
   balance:
-    recharge: http://192.168.220.96:5555/balance/recharge
+    recharge: http://192.168.220.210:5555/balance/recharge
   goods:
-    getServiceByGoodsId: http://192.168.220.96:5555/goods/getServiceByGoodsId
-    addgoods: http://192.168.220.96:5555/goods/pc/admin/card/add
+    getServiceByGoodsId: http://192.168.220.210:5555/goods/getServiceByGoodsId
+    addgoods: http://192.168.220.210:5555/goods/pc/admin/card/add
 medicalservice:
   memberRights:
-    add: http://192.168.220.96:81/admin/memberRights/add
+    add: http://192.168.220.209:81/admin/memberRights/add
 rest:
   msg:
-    listmsg: http://api.uat.daoyitong.com/api/v1/card/sendMsg
+    listmsg: http://api-dev.daoyitong.com/api/v1/card/sendMsg
 admin:
   account:
-    registeraccounts: http://192.168.220.96:81/admin/account/registerAccounts
+    registeraccounts: http://192.168.220.209:81/admin/account/registerAccounts
