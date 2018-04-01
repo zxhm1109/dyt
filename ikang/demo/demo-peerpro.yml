@@ -28,7 +28,7 @@ logging:
           mapper: debug
 server:
   port: 8082
-service
+service: 
   userService:
     interfaceName: com.ikang.comuser.service.api.UserService
     version: 1.0.0
