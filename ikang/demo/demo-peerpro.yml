@@ -1,0 +1,38 @@
+spring:
+  application:
+    name: demo2
+  dubbo:
+    application: 
+      name: demo2
+    base-package: com.example.demo2
+    registry:
+      address: zookeeper://localhost:2181
+    protocol:
+      name: dubbo
+eureka:
+  client:
+    healthcheck:
+      enable: true
+    serviceUrl:
+      defaultZone: http://user:8888@localhost:8761/eureka
+  instance:
+    metadataMap:
+      instanceId: ${spring.application.name}:${server.port}
+    preferIpAddress: true
+logging:
+  level:
+    root: info
+    com:
+      ikang:
+        mybatis:
+          mapper: debug
+server:
+  port: 8082
+service
+  userService:
+    interfaceName: com.ikang.comuser.service.api.UserService
+    version: 1.0.0
+  roleService:
+    interfaceName: com.ikang.comuser.service.api.RoleService
+    version: 1.0.0
+  
