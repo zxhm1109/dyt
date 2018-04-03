@@ -29,9 +29,5 @@ access:
       finance: http://api.uat.daoyitong.com:88/pavo-access/together/finance/recharge
     img: 
       order: http://static.uat.daoyitong.com:88/accompany_order_img@3x.png
-eureka:
-  instance:
-    metadataMap:
-      swaggerUrlPath: http://192.168.220.96:5555/${spring.application.name}/swagger-ui.html
 
 
