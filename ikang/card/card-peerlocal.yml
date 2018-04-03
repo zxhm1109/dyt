@@ -30,7 +30,7 @@ spring:
     read-only: true
     jdbc-interceptors: org.apache.tomcat.jdbc.pool.interceptor.ConnectionState;org.apache.tomcat.jdbc.pool.interceptor.StatementFinalizer
   application:
-    name: ldy-card
+    name: card
 eureka:
   client:
     healthcheck:
