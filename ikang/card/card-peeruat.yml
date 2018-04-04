@@ -63,7 +63,7 @@ cloud:
     addgoods: http://192.168.220.96:5555/goods/pc/admin/card/add
 medicalservice:
   memberRights:
-    add: http://192.168.220.96:81/admin/medicalService/memberRights/add
+    add: http://192.168.220.96:81/admin/serviceMedical/memberRights/add
 rest:
   msg:
     listmsg: http://api.uat.daoyitong.com/api/v1/card/sendMsg
