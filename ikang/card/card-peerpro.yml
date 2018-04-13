@@ -57,7 +57,7 @@ mybatis:
   type-aliases-package: com.ikang.card.entity
 cloud:
   balance:
-    recharge: http://api.daoyitong.com/balance/recharge
+    recharge: http://api.daoyitong.com/cloud/balance/recharge
   goods:
     getServiceByGoodsId: http://api.daoyitong.com/cloud/goods/getServiceByGoodsId
     addgoods: http://api.daoyitong.com/cloud/goods/pc/admin/card/add
