@@ -57,10 +57,10 @@ mybatis:
   type-aliases-package: com.ikang.card.entity
 cloud:
   balance:
-    recharge: http://192.168.0.48:5555/balance/recharge
+    recharge: http://api.daoyitong.com/balance/recharge
   goods:
-    getServiceByGoodsId: http://192.168.0.48:5555/goods/getServiceByGoodsId
-    addgoods: http://192.168.0.48:5555/goods/pc/admin/card/add
+    getServiceByGoodsId: http://api.daoyitong.com/cloud/goods/getServiceByGoodsId
+    addgoods: http://api.daoyitong.com/cloud/goods/pc/admin/card/add
 medicalservice:
   memberRights:
     add: http://api.daoyitong.com/admin/serviceMedical/memberRights/add
