@@ -10,10 +10,10 @@ spring:
       min-idle: 0  
       max-wait: -1
   datasource:
-    url: jdbc:mysql://db.dyt.ikang.com/pavo_filesys?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&autoReconnect=true&failOverReadOnly=false&maxReconnects=10
+    url: jdbc:mysql://db.dyt.ikang.com:3306/pavo_filesys?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&autoReconnect=true&failOverReadOnly=false&maxReconnects=10
     data-source-class-name: com.mysql.jdbc.Driver
     username: daoyitong
-    password: dyt_mysql_456
+    password: pavo_daoyitong!@$
     initial-size: 10
     maximum-pool-size: 300
     max-idle: 30
@@ -40,7 +40,7 @@ eureka:
     healthcheck:
       enable: true
     serviceUrl:
-      defaultZone: http://user:8888@192.168.0.48:8761/eureka
+      defaultZone: http://user:8888@192.168.0.12:8761/eureka,http://user:8888@192.168.0.13:8761/eureka，http://user:8888@192.168.0.14:8761/eureka
   instance:
     metadataMap:
       instanceId: ${spring.application.name}:${server.port}
