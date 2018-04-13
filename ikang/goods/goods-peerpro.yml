@@ -28,7 +28,7 @@ spring:
     test-on-return: true
     test-while-idle: true
     read-only: true
-    org.apache.tomcat.jdbc.pool.interceptor.ConnectionState;org.apache.tomcat.jdbc.pool.interceptor.StatementFinalizer
+    jdbc-interceptors: org.apache.tomcat.jdbc.pool.interceptor.ConnectionState;org.apache.tomcat.jdbc.pool.interceptor.StatementFinalizer
     schema: classpath*:database/ddl/*-product.sql
     data: classpath*:database/dml/*-product.sql
   application:
