@@ -55,5 +55,5 @@ mybatis:
   type-aliases-package: com.ikang.physicalexam.entity
 cloud:
   ikang:
-    onlyCode: fNE7NVk$4*sz5@5
+    onlyCode: fNE7NVk$4*sz5@5 #UAT环境商家唯一码
     findHospInfoByCode: http://uatservices.health.ikang.com/ikang-service/rs/cooperation/findHospInfoByCode #根据套餐CODE查询体检中心信息
