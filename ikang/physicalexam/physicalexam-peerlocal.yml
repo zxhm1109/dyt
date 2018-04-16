@@ -57,7 +57,6 @@ cloud:
   ikang:
     onlyCode: fNE7NVk$4*sz5@5 #UAT环境商家唯一码
     findHospInfoByCode: http://uatservices.health.ikang.com/ikang-service/rs/cooperation/findHospInfoByCode #根据套餐CODE查询体检中心信息
-    findServiceOrderDay: http://uatservices.health.ikang.com/ikang-service/rs/cooperation/findServiceOrderDay #获取体检机构排期接口
     findSupportDayByHospIdUrl: https://uatservices.health.ikang.com/ikang-service/rs/cooperation/findServiceOrderDay #根据hospid获取体检机构排期
     confirmReservationUrl: https://uatservices.health.ikang.com/ikang-service/rs/cooperation/saveOrderInfo #预约单保存
     cancelOrder: https://uatservices.health.ikang.com/ikang-service/rs/cooperation/cancelOrder #取消订单
