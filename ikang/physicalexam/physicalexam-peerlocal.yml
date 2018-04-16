@@ -49,7 +49,7 @@ logging:
         mybatis:
           mapper: debug
 server:
-  port: 9400
+  port: 9900
 mybatis:
   mapper-locations: classpath*:config/mybatis/mapper/*.xml
   type-aliases-package: com.ikang.physicalexam.entity
