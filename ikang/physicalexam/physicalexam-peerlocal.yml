@@ -53,3 +53,6 @@ server:
 mybatis:
   mapper-locations: classpath*:config/mybatis/mapper/*.xml
   type-aliases-package: com.ikang.physicalexam.entity
+cloud:
+  ikang:
+    findHospInfoByCode: http://uatservices.health.ikang.com/ikang-service/rs/cooperation/findHospInfoByCode #根据套餐CODE查询体检中心信息
