@@ -65,7 +65,6 @@ cloud:
     confirmReservationUrl: https://uatservices.health.ikang.com/ikang-service/rs/cooperation/saveOrderInfo #预约单保存
     cancelOrder: https://uatservices.health.ikang.com/ikang-service/rs/cooperation/cancelOrder #取消订单
     updateOrderDate: https://uatservices.health.ikang.com/ikang-service/rs/cooperation/updateOrderDate #预约单改期
-cloud:
   filesys:
     uploadFileSingle: http://api-dev.daoyitong.com/cloud/filesys/file/uploadFileSingle #单文件上传
     urlAllPath: http://api-dev.daoyitong.com/cloud/filesys/file/urlAllpath/byIds #多文件全路径查看(Map格式)
