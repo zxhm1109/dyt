@@ -68,3 +68,4 @@ cloud:
 cloud:
   filesys:
     uploadFileSingle: http://api-dev.daoyitong.com/cloud/filesys/file/uploadFileSingle #单文件上传
+    urlAllPath: http://api-dev.daoyitong.com/cloud/filesys/file/urlAllpath/byIds #多文件全路径查看(Map格式)
