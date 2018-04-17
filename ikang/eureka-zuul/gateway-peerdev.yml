@@ -47,7 +47,7 @@ zuul:
     api-h:
       path: /balance/**
       serviceId: balance
-    api-g:
+    api-i:
       path: /physicalexam/**
       serviceId: physicalexam
 hystrix:
