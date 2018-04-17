@@ -64,4 +64,4 @@ cloud:
     cancelOrder: https://uatservices.health.ikang.com/ikang-service/rs/cooperation/cancelOrder #取消订单
 cloud:
   filesys:
-    urlAllPath: http://api-dev.daoyitong.com/cloud/filesys/file/uploadFileSingle #单文件上传
+    uploadFileSingle: http://api-dev.daoyitong.com/cloud/filesys/file/uploadFileSingle #单文件上传
