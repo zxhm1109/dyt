@@ -63,7 +63,7 @@ cloud:
     addgoods: http://api.daoyitong.com/cloud/goods/pc/admin/card/add
 medicalservice:
   memberRights:
-    add: http://api.daoyitong.com/admin/serviceMedical/memberRights/add
+    add: http://192.168.0.40:50303/memberRights/add
 rest:
   msg:
     listmsg: http://api.daoyitong.com/api/v1/card/sendMsg
