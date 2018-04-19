@@ -62,7 +62,8 @@ cloud:
     getServiceByGoodsId: http://192.168.220.210:5555/goods/getServiceByGoodsId
     addgoods: http://192.168.220.210:5555/goods/pc/admin/card/add
   physicalexam:
-    findPackageByExamId: http://192.168.220.210:5555/goods/physicalexam/findPackageByExamId
+    findPackageByExamId: http://192.168.220.210:5555/physicalexam/findPackageByExamId
+    addExamResource: http://192.168.220.210:5555/physicalexam/addExamResource
 medicalservice:
   memberRights:
     add: http://192.168.220.209:81/admin/memberRights/add
