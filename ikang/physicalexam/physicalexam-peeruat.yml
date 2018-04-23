@@ -1,0 +1,71 @@
+spring:
+  redis:
+    host: uat.redis.daoyitong.com
+    port: 6379
+    pool:  
+      max-active: 8  
+      max-idle: 8  
+      min-idle: 0  
+      max-wait: -1
+  datasource:
+    url: jdbc:mysql://uat.mysql.daoyitong.com:3306/pavo_card?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&autoReconnect=true&failOverReadOnly=false&maxReconnects=10
+    data-source-class-name: com.mysql.jdbc.Driver
+    username: daoyitong
+    password: dyt_mysql_456
+    initial-size: 10
+    maximum-pool-size: 300
+    max-idle: 30
+    min-idle: 2
+    max-wait: 60000
+    max-active: 1000
+    connection-test-query: select 1
+    validation-interval: 30000
+    validation-query: select 1
+    time-between-eviction-runs-millis: 3600000
+    min-evictable-idle-time-millis: 18000000
+    default-read-only: false
+    test-on-borrow: true
+    test-on-return: true
+    test-while-idle: true
+    read-only: true
+    jdbc-interceptors: org.apache.tomcat.jdbc.pool.interceptor.ConnectionState;org.apache.tomcat.jdbc.pool.interceptor.StatementFinalizer
+    schema: classpath*: database/ddl/*-uat.sql
+    data: classpath*: database/dml/*-uat.sql
+  application:
+    name: physicalexam
+eureka:
+  client:
+    healthcheck:
+      enable: true
+    serviceUrl:
+      defaultZone: http://user:8888@192.168.220.96:8761/eureka
+  instance:
+    metadataMap:
+      instanceId: ${spring.application.name}:${server.port}
+    preferIpAddress: true
+logging:
+  level:
+    root: info
+    com:
+      ikang:
+        mybatis:
+          mapper: debug
+server:
+  port: 9900
+mybatis:
+  mapper-locations: classpath*:config/mybatis/mapper/*.xml
+  type-aliases-package: com.ikang.physicalexam.entity
+cloud:
+  ikang:
+    onlyCode: Pvw1MfV!X222@u$ #PRO环境商家唯一码
+    findHospInfoByCode: http://services.health.ikang.com/ikang-service/rs/cooperation/findHospInfoByCode #根据套餐CODE查询体检中心信息
+    findExamRecordInfo: http://services.health.ikang.com/ikang-service/rs/cooperation/findExamRecordInfo #预约单查询
+    findReportInfo: http://services.health.ikang.com/ikang-service/rs/cooperation/findReportInfo #报告查询接口
+    findSupportDayByHospIdUrl: https://services.health.ikang.com/ikang-service/rs/cooperation/findServiceOrderDay #根据hospid获取体检机构排期
+    confirmReservationUrl: https://services.health.ikang.com/ikang-service/rs/cooperation/saveOrderInfo #预约单保存
+    cancelOrder: https://services.health.ikang.com/ikang-service/rs/cooperation/cancelOrder #取消订单
+    updateOrderDate: https://services.health.ikang.com/ikang-service/rs/cooperation/updateOrderDate #预约单改期
+    findCheckDataBack: https://services.health.ikang.com/ikang-service/rs/cooperation/findCheckDataBack #预约到检查询
+  filesys:
+    uploadFileSingle: http://api.daoyitong.com/cloud/filesys/file/uploadFileSingle #单文件上传
+    urlAllPath: http://api.daoyitong.com/cloud/filesys/file/urlAllpath/byIds #多文件全路径查看(Map格式)
