@@ -66,6 +66,7 @@ cloud:
     cancelOrder: https://services.health.ikang.com/ikang-service/rs/cooperation/cancelOrder #取消订单
     updateOrderDate: https://services.health.ikang.com/ikang-service/rs/cooperation/updateOrderDate #预约单改期
     findCheckDataBack: https://services.health.ikang.com/ikang-service/rs/cooperation/findCheckDataBack #预约到检查询
+    registrationUser: https://services.health.ikang.com/ikang-service/rs/cooperation/registrationUser #体检人注册
   filesys:
     uploadFileSingle: http://api.daoyitong.com/cloud/filesys/file/uploadFileSingle #单文件上传
     urlAllPath: http://api.daoyitong.com/cloud/filesys/file/urlAllpath/byIds #多文件全路径查看(Map格式)
