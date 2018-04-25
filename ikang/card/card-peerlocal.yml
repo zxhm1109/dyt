@@ -62,7 +62,7 @@ cloud:
     recharge: http://192.168.220.210:5555/balance/recharge
   goods:
     #getServiceByGoodsId: http://192.168.220.210:5555/goods/getServiceByGoodsId
-    getServiceByGoodsId: http://localhost:9300/goods/getServiceByGoodsId
+    getServiceByGoodsId: http://localhost:9300/getServiceByGoodsId
     addgoods: http://192.168.220.210:5555/goods/pc/admin/card/add
   physicalexam:
     findPackageByExamId: http://192.168.220.210:5555/physicalexam/findPackageByExamId
