@@ -61,7 +61,7 @@ access:
       finance: http://api.uat.daoyitong.com/pavo-access/together/finance/recharge
 order:
   update:
-    paydown: http://192.168.220.96:81/admin/shop/order/update
+    paydown: http://192.168.220.253:50304/shop/order/update
   search:
     byid: http://api.uat.daoyitong.com/api/v1/shop/order/list
   refund:
