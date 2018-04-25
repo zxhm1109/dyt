@@ -1,4 +1,6 @@
 spring:
+  zipkin:
+    base-url: http://localhost:11008
   datasource:
     url: jdbc:mysql://192.168.220.156/pavo_goods?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&autoReconnect=true&failOverReadOnly=false&maxReconnects=10
     data-source-class-name: com.mysql.jdbc.Driver
