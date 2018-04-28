@@ -61,6 +61,9 @@ cloud:
   goods:
     getServiceByGoodsId: http://api.daoyitong.com/cloud/goods/getServiceByGoodsId
     addgoods: http://api.daoyitong.com/cloud/goods/pc/admin/card/add
+  physicalexam:
+    findPackageByExamId: http://api.daoyitong.com/cloud/physicalexam/findPackageByExamId
+    addExamResource: http://api.daoyitong.com/cloud/physicalexam/addExamResource  #添加爱康体检卡密
 medicalservice:
   memberRights:
     add: http://192.168.0.40:50303/memberRights/add
