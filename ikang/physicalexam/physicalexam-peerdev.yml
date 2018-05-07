@@ -55,6 +55,25 @@ server:
 mybatis:
   mapper-locations: classpath*:config/mybatis/mapper/*.xml
   type-aliases-package: com.ikang.physicalexam.entity
+physicalexam:
+  source:
+    statusdesc:
+      - status: 0
+        text: 未绑定
+      - status: 1
+        text: 已绑定，未使用
+      - status: 2
+        text: 已使用，待预约
+      - status: 3
+        text: 已预约，未到检
+      - status: 4
+        text: 已预约，但取消
+      - status: 5
+        text: 已到检，未生成报告
+      - status: 6
+        text: 已生成报告
+      - status: -1
+        text: 过期未使用
 cloud:
   ikang:
     onlyCode: fNE7NVk$4*sz5@5 #UAT环境商家唯一码
