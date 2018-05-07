@@ -70,8 +70,6 @@ physicalexam:
         statusText: 已到检，未生成报告
       - statusCode: 6
         statusText: 已生成报告
-      - statusCode: -1
-        statusText: 过期未使用
 cloud:
   ikang:
     onlyCode: fNE7NVk$4*sz5@5 #UAT环境商家唯一码
