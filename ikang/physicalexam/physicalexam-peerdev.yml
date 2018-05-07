@@ -59,21 +59,21 @@ physicalexam:
   source:
     statusdesc:
       - statusCode: 0
-        StatusText: 未绑定
+        statusText: 未绑定
       - statusCode: 1
-        StatusText: 已绑定，未使用
+        statusText: 已绑定，未使用
       - statusCode: 2
-        StatusText: 已使用，待预约
+        statusText: 已使用，待预约
       - statusCode: 3
-        StatusText: 已预约，未到检
+        statusText: 已预约，未到检
       - statusCode: 4
-        StatusText: 已预约，但取消
+        statusText: 已预约，但取消
       - statusCode: 5
-        StatusText: 已到检，未生成报告
+        statusText: 已到检，未生成报告
       - statusCode: 6
-        StatusText: 已生成报告
+        statusText: 已生成报告
       - statusCode: -1
-        StatusText: 过期未使用
+        statusText: 过期未使用
 cloud:
   ikang:
     onlyCode: fNE7NVk$4*sz5@5 #UAT环境商家唯一码
