@@ -58,22 +58,22 @@ mybatis:
 physicalexam:
   source:
     statusdesc:
-      - status: 0
-        text: 未绑定
-      - status: 1
-        text: 已绑定，未使用
-      - status: 2
-        text: 已使用，待预约
-      - status: 3
-        text: 已预约，未到检
-      - status: 4
-        text: 已预约，但取消
-      - status: 5
-        text: 已到检，未生成报告
-      - status: 6
-        text: 已生成报告
-      - status: -1
-        text: 过期未使用
+      - statusCode: 0
+        StatusText: 未绑定
+      - statusCode: 1
+        StatusText: 已绑定，未使用
+      - statusCode: 2
+        StatusText: 已使用，待预约
+      - statusCode: 3
+        StatusText: 已预约，未到检
+      - statusCode: 4
+        StatusText: 已预约，但取消
+      - statusCode: 5
+        StatusText: 已到检，未生成报告
+      - statusCode: 6
+        StatusText: 已生成报告
+      - statusCode: -1
+        StatusText: 过期未使用
 cloud:
   ikang:
     onlyCode: fNE7NVk$4*sz5@5 #UAT环境商家唯一码
