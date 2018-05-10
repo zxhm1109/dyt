@@ -55,3 +55,5 @@ invoke:
     GetYueYangDepInfo: ${zuul.url}/${service.demo}/v1/schedule/departments #yueyang加载所有科室
     GetYueYangDocInfo: ${zuul.url}/${service.demo}/v1/schedule/advanceExpertQuery #yueyang加载所有医生
     GetYueYangResource: ${zuul.url}/${service.demo}/v1/schedule/department/experts?registerType={registerType}&deptCode={deptCode}&status={status}&vendor={vendor} #yueyang加载号源
+    
+    getJingDongAccessToken: ${zuul.url}/${service.demo}/v1/jingdong/accessToken #京东获取accessToken
