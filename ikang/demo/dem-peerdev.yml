@@ -67,8 +67,6 @@ jingdong:
   price: https://bizapi.jd.com/api/price/
   order: https://bizapi.jd.com/api/order/
   url:
-    bbb: 123
-    aaa: ${jingdong.oauth2}
     token: ${jingdong.oauth2}accessToken #获取token
     refreshToken: ${jingdong.oauth2}refreshToken #refresh token
     getPageNum: ${jingdong.product}getPageNum #获取商品池
