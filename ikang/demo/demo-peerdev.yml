@@ -62,13 +62,10 @@ endpoints:
   restart:
     enabled: true
 jingdong:
-  oauth2: https://bizapi.jd.com/oauth2/
   product: https://bizapi.jd.com/api/product/
   price: https://bizapi.jd.com/api/price/
   order: https://bizapi.jd.com/api/order/
   url:
-    token: ${jingdong.oauth2}accessToken #获取token
-    refreshToken: ${jingdong.oauth2}refreshToken #refresh token
     getPageNum: ${jingdong.product}getPageNum #获取商品池
     getSkuByPage: ${jingdong.product}getSkuByPage #获取sku编号
     getDetail: ${jingdong.product}getDetail #获取商品详情
