@@ -61,9 +61,31 @@ testaaa:
 endpoints:
   restart:
     enabled: true
-jingdong:
+jingdongprop:
   oauth2: https://bizapi.jd.com/oauth2/
   product: https://bizapi.jd.com/api/product/
   price: https://bizapi.jd.com/api/price/
   order: https://bizapi.jd.com/api/order/
+jingdong:
+  url:
+    token: ${jingdongprop.oauth2}accessToken #获取token
+    refreshToken: ${jingdongprop.oauth2}refreshToken #refresh token
+    getPageNum: ${jingdongprop.product}getPageNum #获取商品池
+    getSkuByPage: ${jingdongprop.product}getSkuByPage #获取sku编号
+    getDetail: ${jingdongprop.product}getDetail #获取商品详情
+    skuState: ${jingdongprop.product}skuState #获取商品上下架状态
+    skuImage: ${jingdongprop.product}skuImage #获取商品图片
+    getCommentSummarys: ${jingdongprop.product}getCommentSummarys #获取好评度
+    checkAreaLimit: ${jingdongprop.product}checkAreaLimit #商品区域购买限制
+    getIsCod: ${jingdongprop.product}getIsCod #商品区域知否支持货到付款
+    getSkuGift: ${jingdongprop.product}getSkuGift #查询赠品信息
+    getFreight: ${jingdongprop.order}getFreight #运费查询
+    search: https://bizapi.jd.com/api/search/search #商品搜索
+    check: ${jingdongprop.product}check #商品可售验证
+    getYanbaoSku: ${jingdongprop.product}getYanbaoSku #查询商品延保
+    getCategory: ${jingdongprop.product}getCategory #查询分类信息
+    getCategorys: ${jingdongprop.product}getCategorys #查询分类列表信息
+    getSimilarSku: ${jingdongprop.product}getSimilarSku #同类商品查询
+  price:
+    getSellPrice: ${jingdongprop.price}getSellPrice #批量查询商品售卖价
  
