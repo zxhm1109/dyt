@@ -61,3 +61,6 @@ testaaa:
 endpoints:
   restart:
     enabled: true
+cloud:
+  coddata:
+    deps: http://api-dev.daoyitong.com/cloud/docdata/remote/dep/getDepInfo
