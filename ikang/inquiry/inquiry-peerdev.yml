@@ -63,4 +63,4 @@ endpoints:
     enabled: true
 cloud:
   coddata:
-    deps: http://api-dev.daoyitong.com/cloud/docdata/remote/dep/getDepInfo
+    deps: http://192.168.220.209:9250/remote/dep/getDepInfo
