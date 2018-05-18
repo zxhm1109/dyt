@@ -25,6 +25,8 @@ spring:
     data: classpath*:database/dml/*-dev.sql
   application:
     name: docdata
+  cache:
+    type: guava
 eureka:
   client:
     healthcheck:
