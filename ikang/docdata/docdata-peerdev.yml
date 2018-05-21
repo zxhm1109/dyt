@@ -63,3 +63,6 @@ testaaa:
 endpoints:
   restart:
     enabled: true
+cloud:
+  inquiry:
+    onlinedoctor: http://192.168.220.210:9150/onlinedoctor #给docdata调用添加在线医生
