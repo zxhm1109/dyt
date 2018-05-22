@@ -64,6 +64,7 @@ endpoints:
 cloud:
   coddata:
     deps: http://192.168.220.209:9250/remote/dep/getDepInfo
+    basedoc: http://192.168.220.209:9250/remote/doc/selectDoctorByBaseDocId
 admin:
   account:
     registeraccounts: http://192.168.220.209:81/admin/account/registerAccounts
