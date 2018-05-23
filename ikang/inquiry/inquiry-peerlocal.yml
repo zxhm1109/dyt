@@ -69,3 +69,6 @@ cloud:
 admin:
   account:
     registeraccounts: http://192.168.220.209:81/admin/account/registerAccounts
+extra:
+  medical:
+    getdoclist: http://192.168.220.210:50303/serviceOrder/getdocList
