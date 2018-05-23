@@ -1,4 +1,12 @@
 spring:
+  redis:
+    host: dev.redis.daoyitong.com
+    port: 6379
+    pool:  
+      max-active: 8  
+      max-idle: 8  
+      min-idle: 0  
+      max-wait: -1
   datasource:
     url: jdbc:mysql://dev.mysql.daoyitong.com/pavo_together?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&autoReconnect=true&failOverReadOnly=false&maxReconnects=10
     data-source-class-name: com.mysql.jdbc.Driver
@@ -33,9 +41,6 @@ eureka:
     metadataMap:
       instanceId: ${spring.application.name}:${server.port}
     preferIpAddress: true
-redis:
-  host: dev.redis.daoyitong.com
-  port: 6379
 logging:
   level:
     root: info
