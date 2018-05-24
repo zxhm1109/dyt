@@ -41,9 +41,9 @@ redis:
     host: dev.redis.daoyitong.com
     port: 6379
     pool:  
-      max-active: 12  
-      max-idle: 12  
-      min-idle: 0  
+      max-active: 16
+      max-idle: 16
+      min-idle: 0
       max-wait: -1
 logging:
   level:
