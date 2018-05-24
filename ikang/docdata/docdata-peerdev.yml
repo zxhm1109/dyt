@@ -1,6 +1,6 @@
 spring:
   redis:
-    host: dyt-redis.ikang.com
+    host: dev.redis.daoyitong.com
     port: 6379
     pool:  
       max-active: 8  
