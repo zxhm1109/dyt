@@ -83,6 +83,7 @@ cloud:
     cancelOrder: https://uatservices.health.ikang.com/ikang-service/rs/cooperation/cancelOrder #取消订单
     updateOrderDate: https://uatservices.health.ikang.com/ikang-service/rs/cooperation/updateOrderDate #预约单改期
     findCheckDataBack: https://uatservices.health.ikang.com/ikang-service/rs/cooperation/findCheckDataBack #预约到检查询
+    findCheckDataBackForPage: https://uatservices.health.ikang.com/ikang-service/rs/cooperation/findCheckDataBackForPage #预约到检分页查询
     registrationUser: https://uatservices.health.ikang.com/ikang-service/rs/cooperation/registrationUser #体检人注册
     getResultInfos: https://uatservices.health.ikang.com/ikang-service/rs/cooperation/getResultInfos #体检报告结构化数据查询接口
     getResultInfoPlus: https://uatservices.health.ikang.com/ikang-service/rs/cooperation/getResultInfoPlus #体检报告结构化数据查询接口(含诊断)
