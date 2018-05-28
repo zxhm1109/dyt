@@ -66,3 +66,4 @@ endpoints:
 cloud:
   inquiry:
     onlinedoctor: http://192.168.220.210:9150/onlinedoctor #给docdata调用添加在线医生
+    getInquiryOnOff: http://192.168.220.210:9150/getInquiryOnOff #查询问诊服务支持的问诊类型
