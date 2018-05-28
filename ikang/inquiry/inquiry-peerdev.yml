@@ -72,3 +72,4 @@ admin:
 extra:
   medical:
     getdoclist: http://192.168.220.210:50303/serviceOrder/getdocList
+    list: http://192.168.220.210:50303/serviceOrder/list
