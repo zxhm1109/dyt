@@ -69,7 +69,7 @@ order:
 rest:
   msg:
     listmsg: http://api-dev.daoyitong.com/api/v1/card/sendMsg
-extraOrder：
+extraOrder:
   search:
     getOrderInfo: http://192.168.220.210:50303/serviceOrder/getOrderInfo/
   update: 
