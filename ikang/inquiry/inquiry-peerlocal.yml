@@ -62,6 +62,8 @@ endpoints:
   restart:
     enabled: true
 cloud:
+  filesys:
+    urlAllPath: http://api-dev.daoyitong.com/cloud/filesys/file/urlAllpath/byIds
   coddata:
     deps: http://192.168.220.209:9250/remote/dep/getDepInfo
     basedoc: http://192.168.220.209:9250/remote/doc/selectDoctorByBaseDocId
