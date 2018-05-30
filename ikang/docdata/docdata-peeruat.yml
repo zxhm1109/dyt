@@ -8,7 +8,7 @@ spring:
       min-idle: 0  
       max-wait: -1
   datasource:
-    url: jdbc:mysql://dev.mysql.daoyitong.com/pavo_base_data?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&autoReconnect=true&failOverReadOnly=false&maxReconnects=10
+    url: jdbc:mysql://uat.mysql.daoyitong.com/pavo_base_data?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&autoReconnect=true&failOverReadOnly=false&maxReconnects=10
     data-source-class-name: com.mysql.jdbc.Driver
     username: daoyitong
     password: dyt_mysql_456
