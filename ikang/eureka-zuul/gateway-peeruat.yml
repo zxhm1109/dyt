@@ -7,6 +7,10 @@ server:
     whitelabel:
       enabled: false
 spring: 
+  http:
+    multipart:
+      maxFileSize: 100Mb
+      maxRequestSize: 1000Mb
   application: 
     name: zuul-gateway
 eureka: 
