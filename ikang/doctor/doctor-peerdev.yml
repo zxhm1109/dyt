@@ -33,3 +33,6 @@ server:
 endpoints:
   restart:
     enabled: true
+cloud:
+  filesys:
+    urlAllPath: http://api-dev.daoyitong.com/cloud/filesys/file/urlAllpath/byIds
