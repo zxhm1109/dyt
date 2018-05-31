@@ -64,3 +64,17 @@ hystrix:
 ribbon:  
   ReadTimeout: 60000  
   ConnectTimeout: 60000
+swagger:
+  title: spring-boot-starter-swagger
+  description: Starter for swagger 2.x
+  version: 1.2.0.RELEASE
+  license: Apache License, Version 2.0
+  licenseUrl: https://www.apache.org/licenses/LICENSE-2.0.html
+  termsOfServiceUrl: https://github.com/dyc87112/spring-boot-starter-swagger
+  contact:
+    name: MAX.LIU
+    url: http://www.baidu.com
+    email: coaf@qq.com
+  base-package: com.ikang
+  base-path: /**
+  exclude-path: /error, /ops/**
