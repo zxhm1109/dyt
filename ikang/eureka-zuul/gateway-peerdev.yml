@@ -76,7 +76,7 @@ swagger:
     url: http://www.baidu.com
     email: coaf@qq.com
   base-package: com.ikang
-  base-path: /**
+  base-path: /com/ikang/controller
   exclude-path: /error, /ops/**
   docket:
     filesys:
