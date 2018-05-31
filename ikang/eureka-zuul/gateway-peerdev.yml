@@ -78,3 +78,15 @@ swagger:
   base-package: com.ikang
   base-path: /**
   exclude-path: /error, /ops/**
+swagger.docket.filesys.title=标题
+swagger.docket.filesys.description=描述
+swagger.docket.filesys.version=版本
+swagger.docket.filesys.license=许可证
+swagger.docket.filesys.licenseUrl=许可证URL
+swagger.docket.filesys.termsOfServiceUrl= http://192.168.220.210:9100/swagger-ui.html#/
+swagger.docket.filesys.contact.name=维护人
+swagger.docket.filesys.contact.url=维护人URL
+swagger.docket.filesys.contact.email=维护人email
+swagger.docket.filesys.base-package=swagger扫描的基础包，默认：全扫描
+swagger.docket.filesys.base-path=需要处理的基础URL规则，默认：/**
+swagger.docket.filesys.exclude-path=需要排除的URL规则，默认：空
