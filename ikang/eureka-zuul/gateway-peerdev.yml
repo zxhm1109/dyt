@@ -89,3 +89,13 @@ swagger:
       contact.name: 维护人
       contact.url: 维护人URL
       contact.email: 维护人email
+    card:
+      title: 标题
+      description: 描述
+      version: 版本
+      license: 许可证
+      licenseUrl: 许可证URL
+      termsOfServiceUrl:  http://192.168.220.210:9400/swagger-ui.html#/
+      contact.name: 维护人
+      contact.url: 维护人URL
+      contact.email: 维护人email
