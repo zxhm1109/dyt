@@ -104,6 +104,5 @@ swagger:
         name: 维护人
         url: 维护人URL
         email: 维护人email
-      base-package: com.ikang
       base-path: /**
       exclude-path: /error, /ops/**
