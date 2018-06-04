@@ -38,10 +38,10 @@ cloud:
     urlAllPath: http://api.uat.daoyitong.com/cloud/filesys/file/urlAllpath/byIds
 rest:
   medical:
-    url: http://api-dev.daoyitong.com
+    url: http://api.uat.daoyitong.com
     mapping: /api/v1/serviceOrder/update
 pavo:
   medical:
-    url: http://192.168.220.210:50303
+    url: http://192.168.220.253:50303
     mapping: /serviceOrder/list
     getOrderInfo: /serviceOrder/getOrderInfo/
