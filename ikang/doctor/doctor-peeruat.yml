@@ -1,0 +1,38 @@
+spring:
+  redis:
+    host: uat.redis.daoyitong.com
+    port: 6379
+    pool:  
+      max-active: 8  
+      max-idle: 8  
+      min-idle: 0  
+      max-wait: -1
+  application:
+    name: doctor
+  cache:
+    type: guava
+eureka:
+  client:
+    healthcheck:
+      enable: true
+    serviceUrl:
+      defaultZone: http://user:8888@192.168.220.96:8761/eureka
+  instance:
+    metadataMap:
+      instanceId: ${spring.application.name}:${server.port}
+    preferIpAddress: true
+logging:
+  level:
+    root: info
+    com:
+      ikang:
+        mybatis:
+          mapper: debug
+server:
+  port: 9350
+endpoints:
+  restart:
+    enabled: true
+cloud:
+  filesys:
+    urlAllPath: http://api.uat.daoyitong.com/cloud/filesys/file/urlAllpath/byIds
