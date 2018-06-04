@@ -18,7 +18,7 @@ logging:
   level:
     root: info
 server:
-  port: 9071
+  port: 8081
 testaaa:
   testbbb:
     testccc: ttttt
