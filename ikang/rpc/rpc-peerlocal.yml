@@ -19,4 +19,4 @@ logging:
         mybatis:
           mapper: debug
 server:
-  port: 8071
+  port: 8081
