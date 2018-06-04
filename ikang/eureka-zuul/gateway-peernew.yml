@@ -24,8 +24,8 @@ zuul:
     socket-timeout-millis: 60000
   routes:
     api-a: #服务动态路由映射
-      path: /demo/**
-      serviceId: demo
+      path: /rpc/**
+      serviceId: rpc
     api-b:
       path: /api/v1/zuul/action/**
       serviceId: action
