@@ -1,6 +1,6 @@
 spring:
   application:
-    name: demo2
+    name: rpc
   dubbo:
     application: 
       name: demo2
