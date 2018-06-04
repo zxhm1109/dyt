@@ -27,7 +27,7 @@ logging:
         mybatis:
           mapper: debug
 server:
-  port: 8082
+  port: 8081
 service: 
   userService:
     interfaceName: com.ikang.comuser.service.api.UserService
