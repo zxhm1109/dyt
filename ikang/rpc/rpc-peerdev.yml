@@ -91,6 +91,9 @@ jingdong:
     getSimilarSku: ${jingdongprop.product}getSimilarSku #同类商品查询
   price:
     getSellPrice: ${jingdongprop.price}getSellPrice #批量查询商品售卖价
+    getBalance: ${jingdongprop.price}getBalance #统一余额查询接口
+    selectJincaiCredit: ${jingdongprop.price}selectJincaiCredit #查询用户金彩余额接口(仅供金彩支付客户使用)
+    getBalanceDetail: ${jingdongprop.price}getBalanceDetail #余额明细查询接口
   area:
     getProvince: ${jingdongprop.area}getProvince #获取一级地址
     getCity: ${jingdongprop.area}getCity #获取二级地址
@@ -101,3 +104,15 @@ jingdong:
   stock:
     getNewStockById: ${jingdongprop.stock}getNewStockById #批量获取库存接口(建议订单详情页、下单使用)
     getStockById: ${jingdongprop.stock}getStockById #批量获取库存接口(建议商品列表页使用)
+  order:
+    submitOrder: ${jingdongprop.order}submitOrder #统一下单接口
+    confirmOrder: ${jingdongprop.order}confirmOrder #确认预占库存订单接口
+    cancel: ${jingdongprop.order}cancel #取消未确认订单接口
+    doPay: ${jingdongprop.order}doPay #发起支付接口
+    promiseCalendar: ${jingdongprop.order}promiseCalendar #获取京东预约日历
+    selectJdOrderIdByThirdOrder: ${jingdongprop.order}selectJdOrderIdByThirdOrder #订单反查接口
+    selectJdOrder: ${jingdongprop.order}selectJdOrder #查询京东订单信息接口
+    orderTrack: ${jingdongprop.order}orderTrack #查询配送信息接口
+    confirmReceived: ${jingdongprop.order}confirmReceived #确认收货
+    getOrderReceiptURL: ${jingdongprop.order}getOrderReceiptURL #获取电子签单下载地址
+    saveOrUpdatePoNo: ${jingdongprop.order}saveOrUpdatePoNo #保存更新采购单号.v1
