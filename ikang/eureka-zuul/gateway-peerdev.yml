@@ -90,7 +90,7 @@ swagger:
         name: 维护人
         url: 维护人URL
         email: 维护人email
-      base-package: com.ikang
+      base-package: com.ikang.controller
       base-path: /**
       exclude-path: /error, /ops/**
     card:
