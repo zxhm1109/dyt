@@ -54,9 +54,6 @@ zuul:
     api-i:
       path: /physicalexam/**
       serviceId: physicalexam
-    api-j:
-      path: /extra/**
-      url: http://192.168.220.253:50303/swagger-ui.html#!
 hystrix:
   command:
     default:
