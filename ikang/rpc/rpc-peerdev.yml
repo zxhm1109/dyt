@@ -1,6 +1,6 @@
 spring:
   redis:
-    host: 192.168.220.96
+    host: dev.redis.daoyitong.com
     port: 6379
     pool:  
       max-active: 8  
