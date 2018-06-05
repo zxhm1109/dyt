@@ -28,8 +28,8 @@ zuul:
     socket-timeout-millis: 60000
   routes:
     extra: #服务动态路由映射
-      path: /extra/v2/api-docs
-      url: http://192.168.220.253:50303/swagger-ui.html#!
+      path: /extra/**
+      url: http://192.168.220.253:50303/
 hystrix:
   command:
     default:
