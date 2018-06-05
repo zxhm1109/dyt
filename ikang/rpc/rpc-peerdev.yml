@@ -66,10 +66,12 @@ jingdongprop:
   product: https://bizapi.jd.com/api/product/
   price: https://bizapi.jd.com/api/price/
   order: https://bizapi.jd.com/api/order/
+  area: https://bizapi.jd.com/api/area/
 jingdong:
-  product:
+  token:
     token: ${jingdongprop.oauth2}accessToken #获取token
     refreshToken: ${jingdongprop.oauth2}refreshToken #refresh token
+  product:
     getPageNum: ${jingdongprop.product}getPageNum #获取商品池
     getSkuByPage: ${jingdongprop.product}getSkuByPage #获取sku编号
     getDetail: ${jingdongprop.product}getDetail #获取商品详情
@@ -88,4 +90,10 @@ jingdong:
     getSimilarSku: ${jingdongprop.product}getSimilarSku #同类商品查询
   price:
     getSellPrice: ${jingdongprop.price}getSellPrice #批量查询商品售卖价
- 
+  area:
+    getProvince: ${jingdongprop.area}getProvince #获取一级地址
+    getCity: ${jingdongprop.area}getCity #获取二级地址
+    getCounty: ${jingdongprop.area}getCounty #获取三级地址
+    getTown: ${jingdongprop.area}getTown #获取四级地址
+    checkArea: ${jingdongprop.area}checkArea #验证四级地址是否正确
+    getJDAddressFromAddress: ${jingdongprop.area}getJDAddressFromAddress #根据地址查询京东地址编码.v1
