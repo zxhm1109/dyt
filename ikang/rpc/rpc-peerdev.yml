@@ -67,7 +67,7 @@ jingdongprop:
   price: https://bizapi.jd.com/api/price/
   order: https://bizapi.jd.com/api/order/
 jingdong:
-  url:
+  product:
     token: ${jingdongprop.oauth2}accessToken #获取token
     refreshToken: ${jingdongprop.oauth2}refreshToken #refresh token
     getPageNum: ${jingdongprop.product}getPageNum #获取商品池
