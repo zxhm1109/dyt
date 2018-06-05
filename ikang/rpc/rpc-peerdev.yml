@@ -67,6 +67,7 @@ jingdongprop:
   price: https://bizapi.jd.com/api/price/
   order: https://bizapi.jd.com/api/order/
   area: https://bizapi.jd.com/api/area/
+  stock: https://bizapi.jd.com/ api/stock/
 jingdong:
   token:
     accessToken: ${jingdongprop.oauth2}accessToken #获取token
@@ -97,3 +98,6 @@ jingdong:
     getTown: ${jingdongprop.area}getTown #获取四级地址
     checkArea: ${jingdongprop.area}checkArea #验证四级地址是否正确
     getJDAddressFromAddress: ${jingdongprop.area}getJDAddressFromAddress #根据地址查询京东地址编码.v1
+  stock:
+    getNewStockById: ${jingdongprop.stock}getNewStockById #批量获取库存接口(建议订单详情页、下单使用)
+    getStockById: ${jingdongprop.stock}getStockById #批量获取库存接口(建议商品列表页使用)
