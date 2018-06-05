@@ -69,6 +69,7 @@ jingdongprop:
   area: https://bizapi.jd.com/api/area/
 jingdong:
   token:
+    accessToken: ${jingdongprop.oauth2}accessToken #获取token
     refreshToken: ${jingdongprop.oauth2}refreshToken #refresh token
   product:
     getPageNum: ${jingdongprop.product}getPageNum #获取商品池
