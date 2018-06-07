@@ -36,7 +36,9 @@ jingdongprop:
   price: https://bizapi.jd.com/api/price/
   order: https://bizapi.jd.com/api/order/
   area: https://bizapi.jd.com/api/area/
-  stock: https://bizapi.jd.com/ api/stock/
+  stock: https://bizapi.jd.com/api/stock/
+  checkOrder: https://bizapi.jd.com/api/checkOrder/
+  message: https://bizapi.jd.com/api/message/
 jingdong:
   token:
     accessToken: ${jingdongprop.oauth2}accessToken #获取token
@@ -85,3 +87,10 @@ jingdong:
     confirmReceived: ${jingdongprop.order}confirmReceived #确认收货
     getOrderReceiptURL: ${jingdongprop.order}getOrderReceiptURL #获取电子签单下载地址
     saveOrUpdatePoNo: ${jingdongprop.order}saveOrUpdatePoNo #保存更新采购单号.v1
+  checkOrder:
+    checkNewOrder: ${jingdongprop.checkOrder}checkNewOrder #新建订单查询接口
+    checkDlokOrder: ${jingdongprop.checkOrder}checkDlokOrder #获取妥投订单接口
+    checkRefuseOrder: ${jingdongprop.checkOrder}checkRefuseOrder #获取拒收消息接口
+  message:
+    get: ${jingdongprop.message}get #信息推送接口
+    del: ${jingdongprop.message}del #根据推送id,删除推送信息接口
