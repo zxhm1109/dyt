@@ -20,6 +20,8 @@ logging:
     root: info
 server:
   port: 7000
+swagger:
+  host: api.uat.daoyitong.com/cloud/${spring.application.name}
 endpoints:
   restart:
     enabled: true
