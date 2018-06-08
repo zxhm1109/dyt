@@ -47,7 +47,7 @@ logging:
 server:
   port: 9000
 swagger:
-  host: api.uat.daoyitong.com/cloud/${spring.application.name}
+  host: api.uat.daoyitong.com/cloud
 mybatis:
   mapper-locations: classpath*:config/mybatis/mapper/*.xml
   type-aliases-package: com.ikang.action.entity
