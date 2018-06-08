@@ -25,7 +25,7 @@ logging:
 server:
   port: 8081
 swagger:
-  host: api.uat.daoyitong.com/cloud/${spring.application.name}
+  host: api.uat.daoyitong.com/cloud
 testaaa:
   testbbb:
     testccc: ttttt
