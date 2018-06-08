@@ -55,6 +55,8 @@ server:
 mybatis:
   mapper-locations: classpath*:config/mybatis/mapper/*.xml
   type-aliases-package: com.ikang.goods.entity
+swagger:
+  host: http://api.uat.daoyitong.com/cloud
 testaaa:
   testbbb:
     testccc: ttttt
