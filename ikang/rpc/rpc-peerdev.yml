@@ -56,7 +56,7 @@ mybatis:
   mapper-locations: classpath*:config/mybatis/mapper/*.xml
   type-aliases-package: com.ikang.goods.entity
 swagger:
-  host: api.uat.daoyitong.com/cloud/rpc
+  host: api.uat.daoyitong.com/cloud/${spring.application.name}
 testaaa:
   testbbb:
     testccc: ttttt
