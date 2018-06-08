@@ -13,6 +13,8 @@ spring:
     multipart:
       maxFileSize: 100Mb
       maxRequestSize: 1000Mb
+swagger:
+  host: api.uat.daoyitong.com/cloud/${spring.application.name}
 eureka: 
   client: 
     serviceUrl:
