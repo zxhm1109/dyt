@@ -14,7 +14,7 @@ spring:
       maxFileSize: 100Mb
       maxRequestSize: 1000Mb
 swagger:
-  host: api.dev.daoyitong.com/cloud
+  host: api.uat.daoyitong.com/cloud
 eureka: 
   client: 
     serviceUrl:
