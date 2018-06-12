@@ -77,6 +77,8 @@ extra:
     list: http://192.168.220.210:50303/serviceOrder/list
 roomservice:
   double_room: http://api.uat.daoyitong.com/roomservice/weapp/double_room/
+  live_room: http://api.uat.daoyitong.com/roomservice/weapp/live_room/
+  multi_room: http://api.uat.daoyitong.com/roomservice/weapp/multi_room/
 tencent:
   double_room:
     login: ${roomservice.double_room}login
@@ -89,3 +91,31 @@ tencent:
     add_pusher: ${roomservice.double_room}add_pusher
     delete_pusher: ${roomservice.double_room}delete_pusher
     pusher_heartbeat: ${roomservice.double_room}pusher_heartbeat
+  live_room:
+    login: ${roomservice.live_room}login
+    logout: ${roomservice.live_room}logout
+    get_push_url: ${roomservice.live_room}get_push_url
+    get_room_list: ${roomservice.live_room}get_room_list
+    get_pushers: ${roomservice.live_room}get_pushers
+    create_room: ${roomservice.live_room}create_room
+    destroy_room: ${roomservice.live_room}destroy_room
+    add_pusher: ${roomservice.live_room}add_pusher
+    delete_pusher: ${roomservice.live_room}delete_pusher
+    pusher_heartbeat: ${roomservice.live_room}pusher_heartbeat
+    merge_stream: ${roomservice.live_room}merge_stream
+    get_custom_info: ${roomservice.live_room}get_custom_info
+    set_custom_field: ${roomservice.live_room}set_custom_field
+    add_audience: ${roomservice.live_room}add_audience
+    delete_audience: ${roomservice.live_room}delete_audience
+    get_audiences: ${roomservice.live_room}get_audiences
+  multi_room:
+    login: ${roomservice.multi_room}login
+    logout: ${roomservice.multi_room}logout
+    get_push_url: ${roomservice.multi_room}get_push_url
+    get_room_list: ${roomservice.multi_room}get_room_list
+    get_pushers: ${roomservice.multi_room}get_pushers
+    create_room: ${roomservice.multi_room}create_room
+    destroy_room: ${roomservice.multi_room}destroy_room
+    add_pusher: ${roomservice.multi_room}add_pusher
+    delete_pusher: ${roomservice.multi_room}delete_pusher
+    pusher_heartbeat: ${roomservice.multi_room}pusher_heartbeat
