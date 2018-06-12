@@ -51,7 +51,7 @@ logging:
         mybatis:
           mapper: debug
 server:
-  port: 9150
+  port: 8081
 swagger:
   host: api.uat.daoyitong.com/cloud
 mybatis:
