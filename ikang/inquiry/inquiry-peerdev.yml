@@ -75,4 +75,17 @@ extra:
   medical:
     getdoclist: http://192.168.220.210:50303/serviceOrder/getdocList
     list: http://192.168.220.210:50303/serviceOrder/list
-  
+roomservice:
+  double_room: http://api.uat.daoyitong.com/roomservice/weapp/double_room/
+tencent:
+  double_room:
+    login: ${roomservice.double_room}login
+    logout: ${roomservice.double_room}logout
+    get_push_url: ${roomservice.double_room}get_push_url
+    get_room_list: ${roomservice.double_room}get_room_list
+    get_pushers: ${roomservice.double_room}get_pushers
+    create_room: ${roomservice.double_room}create_room
+    destroy_room: ${roomservice.double_room}destroy_room
+    add_pusher: ${roomservice.double_room}add_pusher
+    delete_pusher: ${roomservice.double_room}delete_pusher
+    pusher_heartbeat: ${roomservice.double_room}pusher_heartbeat
