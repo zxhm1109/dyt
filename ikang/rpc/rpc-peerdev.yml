@@ -8,7 +8,7 @@ spring:
       min-idle: 0  
       max-wait: -1
   datasource:
-    url: jdbc:mysql://dev.mysql.daoyitong.com/pavo_inquiry?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&autoReconnect=true&failOverReadOnly=false&maxReconnects=10
+    url: jdbc:mysql://dev.mysql.daoyitong.com/pavo_rpc?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&autoReconnect=true&failOverReadOnly=false&maxReconnects=10
     data-source-class-name: com.mysql.jdbc.Driver
     username: admin
     password: dyt_mysql_456
@@ -32,7 +32,7 @@ spring:
     schema: classpath*:database/ddl/*-dev.sql
     data: classpath*:database/dml/*-dev.sql
   application:
-    name: inquiry
+    name: rpc
 eureka:
   client:
     healthcheck:
@@ -54,7 +54,7 @@ server:
   port: 9150
 mybatis:
   mapper-locations: classpath*:config/mybatis/mapper/*.xml
-  type-aliases-package: com.ikang.inquiry.entity
+  type-aliases-package: com.ikang.rpc.entity
 testaaa:
   testbbb:
     testccc: ttttt
@@ -75,17 +75,68 @@ extra:
   medical:
     getdoclist: http://192.168.220.210:50303/serviceOrder/getdocList
     list: http://192.168.220.210:50303/serviceOrder/list
-roomservice:
-  double_room: http://api.uat.daoyitong.com/roomservice/weapp/double_room/
-tencent:
-  double_room:
-    login: ${roomservice.double_room}login
-    logout: ${roomservice.double_room}logout
-    get_push_url: ${roomservice.double_room}get_push_url
-    get_room_list: ${roomservice.double_room}get_room_list
-    get_pushers: ${roomservice.double_room}get_pushers
-    create_room: ${roomservice.double_room}create_room
-    destroy_room: ${roomservice.double_room}destroy_room
-    add_pusher: ${roomservice.double_room}add_pusher
-    delete_pusher: ${roomservice.double_room}delete_pusher
-    pusher_heartbeat: ${roomservice.double_room}pusher_heartbeat
+
+jingdongprop:
+  oauth2: https://bizapi.jd.com/oauth2/
+  product: https://bizapi.jd.com/api/product/
+  price: https://bizapi.jd.com/api/price/
+  order: https://bizapi.jd.com/api/order/
+  area: https://bizapi.jd.com/api/area/
+  stock: https://bizapi.jd.com/api/stock/
+  checkOrder: https://bizapi.jd.com/api/checkOrder/
+  message: https://bizapi.jd.com/api/message/
+jingdong:
+  token:
+    accessToken: ${jingdongprop.oauth2}accessToken #获取token
+    refreshToken: ${jingdongprop.oauth2}refreshToken #refresh token
+  product:
+    getPageNum: ${jingdongprop.product}getPageNum #获取商品池
+    getSkuByPage: ${jingdongprop.product}getSkuByPage #获取sku编号
+    getDetail: ${jingdongprop.product}getDetail #获取商品详情
+    skuState: ${jingdongprop.product}skuState #获取商品上下架状态
+    skuImage: ${jingdongprop.product}skuImage #获取商品图片
+    getCommentSummarys: ${jingdongprop.product}getCommentSummarys #获取好评度
+    checkAreaLimit: ${jingdongprop.product}checkAreaLimit #商品区域购买限制
+    getIsCod: ${jingdongprop.product}getIsCod #商品区域知否支持货到付款
+    getSkuGift: ${jingdongprop.product}getSkuGift #查询赠品信息
+    getFreight: ${jingdongprop.order}getFreight #运费查询
+    search: https://bizapi.jd.com/api/search/search #商品搜索
+    check: ${jingdongprop.product}check #商品可售验证
+    getYanbaoSku: ${jingdongprop.product}getYanbaoSku #查询商品延保
+    getCategory: ${jingdongprop.product}getCategory #查询分类信息
+    getCategorys: ${jingdongprop.product}getCategorys #查询分类列表信息
+    getSimilarSku: ${jingdongprop.product}getSimilarSku #同类商品查询
+  price:
+    getSellPrice: ${jingdongprop.price}getSellPrice #批量查询商品售卖价
+    getBalance: ${jingdongprop.price}getBalance #统一余额查询接口
+    selectJincaiCredit: ${jingdongprop.price}selectJincaiCredit #查询用户金彩余额接口(仅供金彩支付客户使用)
+    getBalanceDetail: ${jingdongprop.price}getBalanceDetail #余额明细查询接口
+  area:
+    getProvince: ${jingdongprop.area}getProvince #获取一级地址
+    getCity: ${jingdongprop.area}getCity #获取二级地址
+    getCounty: ${jingdongprop.area}getCounty #获取三级地址
+    getTown: ${jingdongprop.area}getTown #获取四级地址
+    checkArea: ${jingdongprop.area}checkArea #验证四级地址是否正确
+    getJDAddressFromAddress: ${jingdongprop.area}getJDAddressFromAddress #根据地址查询京东地址编码.v1
+  stock:
+    getNewStockById: ${jingdongprop.stock}getNewStockById #批量获取库存接口(建议订单详情页、下单使用)
+    getStockById: ${jingdongprop.stock}getStockById #批量获取库存接口(建议商品列表页使用)
+  order:
+    submitOrder: ${jingdongprop.order}submitOrder #统一下单接口
+    confirmOrder: ${jingdongprop.order}confirmOrder #确认预占库存订单接口
+    cancel: ${jingdongprop.order}cancel #取消未确认订单接口
+    doPay: ${jingdongprop.order}doPay #发起支付接口
+    promiseCalendar: ${jingdongprop.order}promiseCalendar #获取京东预约日历
+    selectJdOrderIdByThirdOrder: ${jingdongprop.order}selectJdOrderIdByThirdOrder #订单反查接口
+    selectJdOrder: ${jingdongprop.order}selectJdOrder #查询京东订单信息接口
+    orderTrack: ${jingdongprop.order}orderTrack #查询配送信息接口
+    confirmReceived: ${jingdongprop.order}confirmReceived #确认收货
+    getOrderReceiptURL: ${jingdongprop.order}getOrderReceiptURL #获取电子签单下载地址
+    saveOrUpdatePoNo: ${jingdongprop.order}saveOrUpdatePoNo #保存更新采购单号.v1
+  checkOrder:
+    checkNewOrder: ${jingdongprop.checkOrder}checkNewOrder #新建订单查询接口
+    checkDlokOrder: ${jingdongprop.checkOrder}checkDlokOrder #获取妥投订单接口
+    checkRefuseOrder: ${jingdongprop.checkOrder}checkRefuseOrder #获取拒收消息接口
+  message:
+    get: ${jingdongprop.message}get #信息推送接口
+    del: ${jingdongprop.message}del #根据推送id,删除推送信息接口
