@@ -90,6 +90,7 @@ cloud:
     findCheckDataBackForPage: https://services.health.ikang.com/ikang-service/rs/cooperation/findCheckDataBackForPage #预约到检分页查询
     registrationUser: https://services.health.ikang.com/ikang-service/rs/cooperation/registrationUser #体检人注册
     getResultInfos: https://uatservices.health.ikang.com/ikang-service/rs/cooperation/getResultInfos #体检报告结构化数据查询接口
+    getResultInfoPlus: https://uatservices.health.ikang.com/ikang-service/rs/cooperation/getResultInfoPlus #体检报告结构化数据查询接口(含诊断)
   filesys:
     uploadFileSingle: http://api.uat.daoyitong.com/cloud/filesys/file/uploadFileSingle #单文件上传
     urlAllPath: http://api.uat.daoyitong.com/cloud/filesys/file/urlAllpath/byIds #多文件全路径查看(Map格式)
