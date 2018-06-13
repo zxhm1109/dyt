@@ -79,6 +79,7 @@ roomservice:
   double_room: http://api.uat.daoyitong.com/roomservice/weapp/double_room/
   live_room: http://api.uat.daoyitong.com/roomservice/weapp/live_room/
   multi_room: http://api.uat.daoyitong.com/roomservice/weapp/multi_room/
+  utils: http://api.uat.daoyitong.com/roomservice/weapp/utils/
 tencent:
   double_room:
     login: ${roomservice.double_room}login
@@ -119,3 +120,7 @@ tencent:
     add_pusher: ${roomservice.multi_room}add_pusher
     delete_pusher: ${roomservice.multi_room}delete_pusher
     pusher_heartbeat: ${roomservice.multi_room}pusher_heartbeat
+  utils:
+    get_login_info: ${roomservice.utils}get_login_info
+    get_test_pushurl: ${roomservice.utils}get_test_pushurl
+    get_test_rtmpaccurl: ${roomservice.utils}get_test_rtmpaccurl
