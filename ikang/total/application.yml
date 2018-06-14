@@ -1,3 +1,59 @@
+spring:
+  redis:
+    host: test.redis.daoyitong.com
+    port: 6379
+    pool:  
+      max-active: 8  
+      max-idle: 8  
+      min-idle: 0  
+      max-wait: -1
+  datasource:
+    data-source-class-name: com.mysql.jdbc.Driver
+    username: daoyitong
+    password: dyt_mysql_456
+    initial-size: 10
+    maximum-pool-size: 300
+    max-idle: 30
+    min-idle: 2
+    max-wait: 60000
+    max-active: 1000
+    connection-test-query: select 1
+    validation-interval: 30000
+    validation-query: select 1
+    time-between-eviction-runs-millis: 3600000
+    min-evictable-idle-time-millis: 18000000
+    default-read-only: false
+    test-on-borrow: true
+    test-on-return: true
+    test-while-idle: true
+    read-only: true
+    jdbc-interceptors: org.apache.tomcat.jdbc.pool.interceptor.ConnectionState;org.apache.tomcat.jdbc.pool.interceptor.StatementFinalizer
+    schema: classpath*:database/ddl/*-uat.sql
+    data: classpath*:database/dml/*-uat.sql
+eureka:
+  client:
+    healthcheck:
+      enable: true
+    serviceUrl:
+      defaultZone: test.eureka.daoyitong.com:8761/eureka
+  instance:
+    metadataMap:
+      instanceId: ${spring.application.name}:${server.port}
+    preferIpAddress: true
+logging:
+  level:
+    root: info
+    com:
+      ikang:
+        mybatis:
+          mapper: debug
+swagger:
+  host: api.uat.daoyitong.com/cloud
+mybatis:
+  mapper-locations: classpath*:config/mybatis/mapper/*.xml
+endpoints:
+  restart:
+    enabled: true
 unwork:
   year: 2018
   excludeWeekDay:
@@ -29,6 +85,4 @@ access:
       finance: http://api.uat.daoyitong.com:88/pavo-access/together/finance/recharge
     img: 
       order: http://static.uat.daoyitong.com:88/accompany_order_img@3x.png
-swagger:
-  host: default
 
