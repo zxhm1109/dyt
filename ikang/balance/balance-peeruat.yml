@@ -1,78 +1,28 @@
 spring:
-  redis:
-    host: uat.redis.daoyitong.com
-    port: 6379
-    pool:  
-      max-active: 8  
-      max-idle: 8  
-      min-idle: 0  
-      max-wait: -1
   datasource:
     url: jdbc:mysql://uat.mysql.daoyitong.com/pavo_balance?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&autoReconnect=true&failOverReadOnly=false&maxReconnects=10
-    data-source-class-name: com.mysql.jdbc.Driver
-    username: daoyitong
-    password: dyt_mysql_456
-    initial-size: 10
-    maximum-pool-size: 300
-    max-idle: 30
-    min-idle: 2
-    max-wait: 60000
-    max-active: 1000
-    connection-test-query: select 1
-    validation-interval: 30000
-    validation-query: select 1
-    time-between-eviction-runs-millis: 3600000
-    min-evictable-idle-time-millis: 18000000
-    default-read-only: false
-    test-on-borrow: true
-    test-on-return: true
-    test-while-idle: true
-    read-only: true
-    jdbc-interceptors: org.apache.tomcat.jdbc.pool.interceptor.ConnectionState;org.apache.tomcat.jdbc.pool.interceptor.StatementFinalizer
-    schema: classpath*:database/ddl/*-uat.sql
-    data: classpath*:database/dml/*-uat.sql
   application:
     name: balance
-eureka:
-  client:
-    healthcheck:
-      enable: true
-    serviceUrl:
-      defaultZone: http://user:8888@192.168.220.96:8761/eureka
-  instance:
-    metadataMap:
-      instanceId: ${spring.application.name}:${server.port}
-    preferIpAddress: true
-logging:
-  level:
-    root: info
-    com:
-      ikang:
-        mybatis:
-          mapper: debug
 server:
   port: 9500
-swagger:
-  host: api.uat.daoyitong.com/cloud
 mybatis:
-  mapper-locations: classpath*:config/mybatis/mapper/*.xml
   type-aliases-package: com.ikang.balance.entity
 access: 
   together: 
     service: 
-      finance: http://api.uat.daoyitong.com/pavo-access/together/finance/recharge
+      finance: http://api-test.daoyitong.com/pavo-access/together/finance/recharge
 order:
   update:
-    paydown: http://192.168.220.253:50304/shop/order/update
+    paydown: http://test.shoporder.daoyitong.com:50304/shop/order/update #直接调用shop
   search:
-    byid: http://api.uat.daoyitong.com/api/v1/shop/order/list
+    byid: http://api-test.daoyitong.com/api/v1/shop/order/list #从rest转发到shop
   refund:
-    refundservice: http://192.168.220.96:82/rest/api/v1/refund/refundService
+    refundservice: http://api-test.daoyitong.com/api/v1/refund/refundService #从rest转发到shop
 rest:
   msg:
-    listmsg: http://api.uat.daoyitong.com/api/v1/card/sendMsg
+    listmsg: http://api-test.daoyitong.com/api/v1/card/sendMsg
 extraOrder:
   search:
-    getOrderInfo: http://192.168.220.253:50303/serviceOrder/getOrderInfo/
+    getOrderInfo: http://test.medical.daoyitong.com:50303/serviceOrder/getOrderInfo/
   update: 
-    serviceOrder: http://192.168.220.253:50303/serviceOrder/update
+    serviceOrder: http://test.medical.daoyitong.com:50303/serviceOrder/update
