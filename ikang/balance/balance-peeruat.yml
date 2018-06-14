@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:mysql://uat.mysql.daoyitong.com/pavo_balance?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&autoReconnect=true&failOverReadOnly=false&maxReconnects=10
+    url: jdbc:mysql://test.mysql.daoyitong.com:3306/pavo_balance?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&autoReconnect=true&failOverReadOnly=false&maxReconnects=10
   application:
     name: balance
 server:
