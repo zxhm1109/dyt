@@ -31,10 +31,10 @@ zuul:
   routes:
     extra: #服务动态路由映射
       path: /extra/**
-      url: http://192.168.220.253:50303/
+      url: http://test.medical.daoyitong.com:50303/
     shop: 
       path: /shop/**
-      url: http://192.168.220.253:50304/
+      url: http://test.shoporder.daoyitong.com:50304/
 hystrix:
   command:
     default:
