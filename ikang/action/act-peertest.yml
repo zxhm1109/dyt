@@ -1,0 +1,35 @@
+spring:
+  datasource:
+    url: jdbc:mysql://uat.mysql.daoyitong.com:3306/pavo_card?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&autoReconnect=true&failOverReadOnly=false&maxReconnects=10
+  application:
+    name: action
+server:
+  port: 9000
+mybatis:
+  type-aliases-package: com.ikang.action.entity
+excel:
+  export:
+    dateTime: 日期
+    actions:
+      - actionId: 0
+        cellhead: 体检预约模块
+      - actionId: 1
+        cellhead: 齿科预约模块
+      - actionId: 2
+        cellhead: 分诊大厅模块
+      - actionId: 3
+        cellhead: 预约挂号模块
+      - actionId: 4
+        cellhead: 健康保险模块
+      - actionId: 5
+        cellhead: 就医陪诊模块
+      - actionId: 6
+        cellhead: 基因检测模块
+      - actionId: 7
+        cellhead: 运动计步模块
+      - actionId: 8
+        cellhead: 健康商城模块
+      - actionId: 9
+        cellhead: 电话医生模块
+      - actionId: 10
+        cellhead: EXTRA服务模块
