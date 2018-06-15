@@ -63,7 +63,5 @@ access:
     img: 
       order: http://img.daoyitong.com/together/accompany_order_img@3x.png
 staticResource:
-  url: http://img.daoyitong.com/together/
-  uploadPath: /data/uploads/together
   uploadUrl: http://192.168.220.210:9100/file/uploadFileSingle
   findByIdUrl: http://192.168.220.210:9100/file/urlAllpath/byIds
