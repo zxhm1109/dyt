@@ -56,7 +56,5 @@ mybatis:
 together:
   getUserOrder: http://192.168.220.210:5555/together/user/order
 staticResource:
-  url: http://static-dev.daoyitong.com/
-  uploadPath: /home/upload
   uploadUrl: http://192.168.220.210:9100/file/uploadFileSingle
   findByIdUrl: http://192.168.220.210:9100/file/urlAllpath/byIds
