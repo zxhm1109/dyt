@@ -74,6 +74,10 @@ extra:
   medical:
     getdoclist: http://192.168.220.253:50303/serviceOrder/getdocList
     list: http://192.168.220.253:50303/serviceOrder/list
+access:
+  rest:
+    getStandDepartments: http://api.uat.daoyitong.com/pavo-access/rest/base/department/getStandDepartments
+    getUnStandDepartments: http://api.uat.daoyitong.com/pavo-access/rest/base/department/getUnStandDepartments
 roomservice:
   double_room: http://api.uat.daoyitong.com/roomservice/weapp/double_room/
   live_room: http://api.uat.daoyitong.com/roomservice/weapp/live_room/
