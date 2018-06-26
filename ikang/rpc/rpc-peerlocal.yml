@@ -1,44 +1,20 @@
 spring:
   redis:
-    host: dev.redis.daoyitong.com
+    host: 127.0.0.1
     port: 6379
     pool:  
       max-active: 8  
       max-idle: 8  
       min-idle: 0  
       max-wait: -1
-  datasource:
-    url: jdbc:mysql://dev.mysql.daoyitong.com/pavo_rpc?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&autoReconnect=true&failOverReadOnly=false&maxReconnects=10
-    data-source-class-name: com.mysql.jdbc.Driver
-    username: admin
-    password: dyt_mysql_456
-    initial-size: 10
-    maximum-pool-size: 300
-    max-idle: 30
-    min-idle: 2
-    max-wait: 60000
-    max-active: 1000
-    connection-test-query: select 1
-    validation-interval: 30000
-    validation-query: select 1
-    time-between-eviction-runs-millis: 3600000
-    min-evictable-idle-time-millis: 18000000
-    default-read-only: false
-    test-on-borrow: true
-    test-on-return: true
-    test-while-idle: true
-    read-only: true
-    jdbc-interceptors: org.apache.tomcat.jdbc.pool.interceptor.ConnectionState;org.apache.tomcat.jdbc.pool.interceptor.StatementFinalizer
-    schema: classpath*:database/ddl/*-dev.sql
-    data: classpath*:database/dml/*-dev.sql
   application:
-    name: rpc-chen
+    name: rpc
 eureka:
   client:
     healthcheck:
       enable: true
     serviceUrl:
-      defaultZone: http://user:8888@192.168.220.210:8761/eureka
+      defaultZone: http://user:8888@192.168.220.96:8761/eureka
   instance:
     metadataMap:
       instanceId: ${spring.application.name}:${server.port}
@@ -46,36 +22,16 @@ eureka:
 logging:
   level:
     root: info
-    com:
-      ikang:
-        mybatis:
-          mapper: debug
 server:
   port: 8081
-mybatis:
-  mapper-locations: classpath*:config/mybatis/mapper/*.xml
-  type-aliases-package: com.ikang.rpc.entity
+swagger:
+  host: api.uat.daoyitong.com/cloud
 testaaa:
   testbbb:
     testccc: ttttt
 endpoints:
   restart:
     enabled: true
-cloud:
-  filesys:
-    urlAllPath: http://api-dev.daoyitong.com/cloud/filesys/file/urlAllpath/byIds
-  coddata:
-    deps: http://192.168.220.209:9250/remote/dep/getDepInfo
-    basedoc: http://192.168.220.209:9250/remote/doc/selectDoctorByBaseDocId
-    getHospGradeByIds: http://192.168.220.209:9250/remote/hosp/getHospGradeByIds
-admin:
-  account:
-    registeraccounts: http://192.168.220.209:81/admin/account/registerAccounts
-extra:
-  medical:
-    getdoclist: http://192.168.220.210:50303/serviceOrder/getdocList
-    list: http://192.168.220.210:50303/serviceOrder/list
-
 jingdongprop:
   oauth2: https://bizapi.jd.com/oauth2/
   product: https://bizapi.jd.com/api/product/
