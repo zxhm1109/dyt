@@ -71,6 +71,8 @@ admin:
   account:
     registeraccounts: http://192.168.220.96:81/admin/account/registerAccounts
 extra:
+  search:
+    getOrderInfo: http://api.uat.daoyitong.com/cloud/extra/serviceOrder/getOrderInfo/
   medical:
     getdoclist: http://192.168.220.253:50303/serviceOrder/getdocList
     list: http://192.168.220.253:50303/serviceOrder/list
