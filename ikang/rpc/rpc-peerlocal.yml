@@ -25,7 +25,7 @@ logging:
 server:
   port: 8081
 swagger:
-  host: api.uat.daoyitong.com/cloud
+  host: default
 testaaa:
   testbbb:
     testccc: ttttt
