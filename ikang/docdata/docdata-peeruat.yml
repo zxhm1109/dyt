@@ -66,3 +66,7 @@ cloud:
   inquiry:
     onlinedoctor: http://192.168.220.96:9150/onlinedoctor #给docdata调用添加在线医生
     getInquiryOnOff: http://192.168.220.96:9150/getInquiryOnOff #查询问诊服务支持的问诊类型
+access:
+  rest:
+    queryHospListByAreaId: http://api.uat.daoyitong.com/pavo-access/rest/base/hosp/queryHospListByAreaId
+    getDocDict: http://api.uat.daoyitong.com/pavo-access/rest/base/dict/getDocDict
