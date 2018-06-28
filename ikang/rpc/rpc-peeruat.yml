@@ -48,6 +48,9 @@ server:
   port: 8081
 swagger:
   host: api.uat.daoyitong.com/cloud
+mybatis:
+  mapper-locations: classpath*:config/mybatis/mapper/*.xml
+  type-aliases-package: com.ikang.rpc.entity
 testaaa:
   testbbb:
     testccc: ttttt
