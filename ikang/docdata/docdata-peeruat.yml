@@ -71,3 +71,9 @@ access:
     queryHospListByAreaId: http://api.uat.daoyitong.com/pavo-access/rest/base/hosp/queryHospListByAreaId
     queryHospListByAreaIdList: http://api.uat.daoyitong.com/pavo-access/rest/base/hosp/queryHospListByAreaIdList
     getDocDict: http://api.uat.daoyitong.com/pavo-access/rest/base/dict/getDocDict
+    selectListByParentId: http://api.uat.daoyitong.com/pavo-access/rest/base/area/selectListByParentId
+    selectListByParentIds: http://api.uat.daoyitong.com/pavo-access/rest/base/area/selectListByParentIds
+    getDepartmentsByPdepId: http://api.uat.daoyitong.com/pavo-access/rest/base/department/getDepartmentsByPdepId
+    byHospIds: http://api.uat.daoyitong.com/pavo-access/rest/base/department/unStandDepartments/byHospIds
+    byHospId: http://api.uat.daoyitong.com/pavo-access/rest/base/department/unStandDepartments/byHospId
+    getAllUnDepartmentByUnDepartmentIds: http://api.uat.daoyitong.com/pavo-access/rest/base/department/getAllUnDepartmentByUnDepartmentIds
