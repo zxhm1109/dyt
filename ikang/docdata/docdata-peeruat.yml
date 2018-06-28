@@ -69,4 +69,5 @@ cloud:
 access:
   rest:
     queryHospListByAreaId: http://api.uat.daoyitong.com/pavo-access/rest/base/hosp/queryHospListByAreaId
+    queryHospListByAreaIdList: http://api.uat.daoyitong.com/pavo-access/rest/base/hosp/queryHospListByAreaIdList
     getDocDict: http://api.uat.daoyitong.com/pavo-access/rest/base/dict/getDocDict
