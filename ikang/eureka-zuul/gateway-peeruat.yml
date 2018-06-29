@@ -18,7 +18,7 @@ swagger:
 eureka: 
   client: 
     serviceUrl:
-      defaultZone: http://user:8888@192.168.220.96:8761/eureka
+      defaultZone: http://user:8888@uat.eureka.daoyitong.com:8761/eureka
     healthcheck:
       enable: true
   instance:
