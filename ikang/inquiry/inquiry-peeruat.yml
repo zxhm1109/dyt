@@ -80,6 +80,7 @@ access:
   rest:
     getStandDepartments: http://api.uat.daoyitong.com/pavo-access/rest/base/department/getStandDepartments
     getUnStandDepartments: http://api.uat.daoyitong.com/pavo-access/rest/base/department/getUnStandDepartments
+    queryHospGradeByHospIds: http://api.uat.daoyitong.com/pavo-access/rest/base/hosp/queryHospGradeByHospIds
 roomservice:
   double_room: http://api.uat.daoyitong.com/roomservice/weapp/double_room/
   live_room: http://api.uat.daoyitong.com/roomservice/weapp/live_room/
