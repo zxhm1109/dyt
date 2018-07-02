@@ -12,7 +12,7 @@ eureka:
       instanceId: ${spring.application.name}:${server.port}
     preferIpAddress: true
 redis:
-  host: 192.168.220.96
+  host: uat.redis.daoyitong.com
   port: 6379
 logging:
   level:
@@ -25,9 +25,9 @@ endpoints:
   restart:
     enabled: true
 zuul:
-  url: http://192.168.220.96:5555 #zuul地址，用以restTemplate调用
+  url: http://api.uat.daoyitong.com/cloud #zuul地址，用以restTemplate调用
 service:
-  demo: demo #serviceName
+  demo: rpc
 invoke:
   demo:
     FuGaoOutpatientInfo: ${zuul.url}/${service.demo}/v1/FuGaoOutpatientInfo #erTong加载科室
