@@ -1,6 +1,6 @@
 spring:
   redis:
-    host: 192.168.220.235
+    host: uat.redis.daoyitong.com
     port: 6379
     pool:  
       max-active: 8  
@@ -8,10 +8,10 @@ spring:
       min-idle: 0  
       max-wait: -1
   datasource:
-    url: jdbc:mysql://192.168.99.207/dyt_together?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&autoReconnect=true&failOverReadOnly=false&maxReconnects=10
+    url: jdbc:mysql://uat.mysql.daoyitong.com:3306/pavo_together?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&autoReconnect=true&failOverReadOnly=false&maxReconnects=10
     data-source-class-name: com.mysql.jdbc.Driver
-    username: pavo
-    password: pavo
+    username: daoyitong
+    password: dyt_mysql_456
     initial-size: 10
     maximum-pool-size: 300
     max-idle: 30
