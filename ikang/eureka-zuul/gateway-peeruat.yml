@@ -27,7 +27,7 @@ eureka:
 zuul:
   host:
     connect-timeout-millis: 10000
-    socket-timeout-millis: 60000
+    socket-timeout-millis: 180000 #180秒超时
   routes:
     extra: #服务动态路由映射
       path: /extra/**
