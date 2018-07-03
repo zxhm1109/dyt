@@ -44,9 +44,8 @@ pavo_cloud_base_url=http://api.uat.daoyitong.com/
 
 pavo_case_update_url=cloud/inquiry/updateCase
 
-##\u6DFB\u52A0\u533B\u751F\u7AEF\u8D26\u52A1\u6D41\u6C34\u8BB0\u5F55
 add_order_acount_record=cloud/inquiry/addOrderAcountRecord
-##\u66F4\u65B0\u6D41\u6C34\u8BB0\u5F55
+
 update_order_acount_record=cloud/inquiry/updateOrderAcountRecord
 
 add_case = cloud/inquiry/addCase
@@ -55,7 +54,7 @@ swagger.host= api.uat.daoyitong.com/cloud
 
 logging.config=classpath:logback-${spring.profiles.active}.xml
 mapper.mappers=tk.mybatis.mapper.common.Mapper 
-#mybatis.mapper-locations=classpath:com/cn/mapper/*.xml
+
 mapper.not-empty=false
 mapper.identity=MYSQL
 mybatis.type-handlers-package=com.ikang.pavo.medical.handler
@@ -65,8 +64,6 @@ pagehelper.reasonable=true
 pagehelper.supportMethodsArguments=true
 pagehelper.params=count=countSql
 
-
-#\u817E\u8BAF\u4E91\u901A\u8BAF\u914D\u7F6E
 im.base.url=https://console.tim.qq.com/
 im.SdkAppid=1400088467
 im.Identifier=admin
