@@ -44,3 +44,23 @@ update_order_acount_record=cloud/inquiry/updateOrderAcountRecord
 add_case = cloud/inquiry/addCase
 
 swagger.host= api.uat.daoyitong.com/cloud
+
+logging.config=classpath:logback-${spring.profiles.active}.xml
+mapper.mappers=tk.mybatis.mapper.common.Mapper 
+#mybatis.mapper-locations=classpath:com/cn/mapper/*.xml
+mapper.not-empty=false
+mapper.identity=MYSQL
+mybatis.type-handlers-package=com.ikang.pavo.medical.handler
+
+pagehelper.helperDialect=mysql
+pagehelper.reasonable=true
+pagehelper.supportMethodsArguments=true
+pagehelper.params=count=countSql
+
+
+#\u817E\u8BAF\u4E91\u901A\u8BAF\u914D\u7F6E
+im.base.url=https://console.tim.qq.com/
+im.SdkAppid=1400088467
+im.Identifier=admin
+im.UserSig=eJxlj11PgzAYhe-5FQ23GlfKV2OyC7ZsigE3-AK8aZAWVpe2CGXTGf*7ikvE*N4*z8k577sBADDvotuzoixVLzXRbw0zwTkwoXn6C5uGU1JoYrf0H2SvDW8ZKSrN2gFarusiCMcOp0xqXvGjUVDB5Qh3dEuGjp*88xXG2PH8scLrAcaLZB4uqsNkEzcsmS27VSKKq0BUMsv7fZqnjD68lCy4jlGa36g04DNvp9v6QvX4*T67TLqnKPIfswNO6MTfrJbbkzqch4p660Dsp9NRpeaCHR9C2LF9*GfQjrUdV3IQELRcC9nw*0zjw-gEqZ9eCg__
+
