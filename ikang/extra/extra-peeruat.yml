@@ -1,0 +1,36 @@
+#UAT\u7AEF\u53E3\u53F7
+server.port=50303
+
+#\u6570\u636E\u5E93\u4FE1\u606F
+spring.datasource.url=jdbc:mysql://192.168.220.235:3306/pavo_medical_service?useUnicode=true&amp;characterEncoding=utf-8
+spring.datasource.username=daoyitong
+spring.datasource.password=dyt_mysql_456
+spring.datasource.driver-class-name=com.mysql.jdbc.Driver
+spring.datasource.druid.initial-size=10
+spring.datasource.druid.min-idle=10
+spring.datasource.druid.max-active=30
+
+# redis \u914D\u7F6E
+spring.redis.host=192.168.220.235
+spring.redis.port=6379
+
+account_query_url=http://192.168.220.96:81/admin/account/getAccountByUser
+
+aikang_MIS_url = http://uat.afterinspection.ikang.com
+
+ikang_Token = 1e43713701d73de01b024498da2d7500
+
+send_case_massage_url=cloud/inquiry/addCase
+
+pavo_cloud_base_url=http://api.uat.daoyitong.com/
+
+pavo_case_update_url=cloud/inquiry/updateCase
+
+##\u6DFB\u52A0\u533B\u751F\u7AEF\u8D26\u52A1\u6D41\u6C34\u8BB0\u5F55
+add_order_acount_record=cloud/inquiry/addOrderAcountRecord
+##\u66F4\u65B0\u6D41\u6C34\u8BB0\u5F55
+update_order_acount_record=cloud/inquiry/updateOrderAcountRecord
+
+add_case = cloud/inquiry/addCase
+
+swagger.host= api.uat.daoyitong.com/cloud
