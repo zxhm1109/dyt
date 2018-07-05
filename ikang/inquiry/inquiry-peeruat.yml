@@ -130,3 +130,6 @@ tencent:
     get_login_info: ${roomservice.utils}get_login_info
     get_test_pushurl: ${roomservice.utils}get_test_pushurl
     get_test_rtmpaccurl: ${roomservice.utils}get_test_rtmpaccurl
+rest:
+  msg:
+    listmsg: http://api.uat.daoyitong.com/api/v1/card/sendMsg
