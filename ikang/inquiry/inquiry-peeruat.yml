@@ -60,6 +60,8 @@ mybatis:
 endpoints:
   restart:
     enabled: true
+dythospital:
+  ids: 111111111111111,222222222222
 cloud:
   filesys:
     urlAllPath: http://api.uat.daoyitong.com/cloud/filesys/file/urlAllpath/byIds
