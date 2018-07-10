@@ -61,6 +61,10 @@ testaaa:
 endpoints:
   restart:
     enabled: true
+dythospital:
+  ids: 1506493377514403
+doctor:
+  cashDate: 13
 cloud:
   filesys:
     urlAllPath: http://api-dev.daoyitong.com/cloud/filesys/file/urlAllpath/byIds
