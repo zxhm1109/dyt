@@ -36,3 +36,15 @@ endpoints:
 cloud:
   filesys:
     urlAllPath: http://api-dev.daoyitong.com/cloud/filesys/file/urlAllpath/byIds
+pavo:
+  medical:
+    url: http://192.168.220.253:50303
+    mapping: /serviceOrder/list
+    getOrderInfo: /serviceOrder/getOrderInfo/
+    updateResultMarks: /serviceOrder/updateResultMarks
+    profile: peeruat
+rest:
+  medical:
+    url: http://api.uat.daoyitong.com
+    mapping: /api/v1/serviceOrder/update
+    profile: peeruat
