@@ -67,3 +67,14 @@ cloud:
   inquiry:
     onlinedoctor: http://192.168.220.210:9150/onlinedoctor #给docdata调用添加在线医生
     getInquiryOnOff: http://192.168.220.210:9150/getInquiryOnOff #查询问诊服务支持的问诊类型
+access:
+  rest:
+    queryHospListByAreaId: http://api-dev.daoyitong.com/pavo-access/rest/base/hosp/queryHospListByAreaId
+    queryHospListByAreaIdList: http://api-dev.daoyitong.com/pavo-access/rest/base/hosp/queryHospListByAreaIdList
+    getDocDict: http://api-dev.daoyitong.com/pavo-access/rest/base/dict/getDocDict
+    selectListByParentId: http://api-dev.daoyitong.com/pavo-access/rest/base/area/selectListByParentId
+    selectListByParentIds: http://api-dev.daoyitong.com/pavo-access/rest/base/area/selectListByParentIds
+    getDepartmentsByPdepId: http://api-dev.daoyitong.com/pavo-access/rest/base/department/getDepartmentsByPdepId
+    byHospIds: http://api-dev.daoyitong.com/pavo-access/rest/base/department/unStandDepartments/byHospIds
+    byHospId: http://api-dev.daoyitong.com/pavo-access/rest/base/department/unStandDepartments/byHospId
+    getAllUnDepartmentByUnDepartmentIds: http://api-dev.daoyitong.com/pavo-access/rest/base/department/getAllUnDepartmentByUnDepartmentIds
