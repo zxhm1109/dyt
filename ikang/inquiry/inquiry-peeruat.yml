@@ -64,6 +64,7 @@ dythospital:
   ids: 1506493377514403
 doctor:
   cashDate: 13
+  cashTimes: 100
 cloud:
   filesys:
     urlAllPath: http://api.uat.daoyitong.com/cloud/filesys/file/urlAllpath/byIds
