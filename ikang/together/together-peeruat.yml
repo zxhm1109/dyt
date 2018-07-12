@@ -59,7 +59,7 @@ together:
   getUserOrder: http://192.168.220.96:5555/together/user/order
 medicalservice:
   memberRights:
-    useMemberRights: http://192.168.220.96:81/admin/serviceMedical/memberRights/useMemberRights
+    useMemberRights: http://api.uat.daoyitong.com/cloud/extra/memberRights/useMemberRights
 staticResource:
   uploadUrl: http://192.168.220.210:9100/file/uploadFileSingle
   findByIdUrl: http://192.168.220.210:9100/file/urlAllpath/byIds
