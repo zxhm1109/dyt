@@ -61,7 +61,7 @@ endpoints:
   restart:
     enabled: true
 dythospital:
-  ids: 1506493377514403
+  ids: 1530515622578692
 doctor:
   cashDate: 13 #医生端当月提现日期限制
   cashTimes: 100 #医生端当月提现次数限制
