@@ -40,7 +40,7 @@ eureka:
     healthcheck:
       enable: true
     serviceUrl:
-      defaultZone: http://user:8888@192.168.220.210:8761/eureka
+      defaultZone: http://user:8888@dev.eureka.daoyitong.com:8761/eureka
   instance:
     metadataMap:
       instanceId: ${spring.application.name}:${server.port}
