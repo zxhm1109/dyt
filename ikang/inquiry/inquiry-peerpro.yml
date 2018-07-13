@@ -1,0 +1,162 @@
+spring:
+  redis:
+    host: dyt-redis.ikang.com
+    port: 6379
+    pool:  
+      max-active: 8  
+      max-idle: 8  
+      min-idle: 0  
+      max-wait: -1
+  datasource:
+    url: jdbc:mysql://db.dyt.ikang.com:3306/pavo_inquiry?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&autoReconnect=true&failOverReadOnly=false&maxReconnects=10
+    data-source-class-name: com.mysql.jdbc.Driver
+    username: daoyitong
+    password: pavo_daoyitong!@$
+    initial-size: 10
+    maximum-pool-size: 300
+    max-idle: 30
+    min-idle: 2
+    max-wait: 60000
+    max-active: 1000
+    connection-test-query: select 1
+    validation-interval: 30000
+    validation-query: select 1
+    time-between-eviction-runs-millis: 3600000
+    min-evictable-idle-time-millis: 18000000
+    default-read-only: false
+    test-on-borrow: true
+    test-on-return: true
+    test-while-idle: true
+    read-only: true
+    jdbc-interceptors: org.apache.tomcat.jdbc.pool.interceptor.ConnectionState;org.apache.tomcat.jdbc.pool.interceptor.StatementFinalizer
+    schema: classpath*:database/ddl/*-product.sql
+    data: classpath*:database/dml/*-product.sql
+  application:
+    name: inquiry
+eureka:
+  client:
+    healthcheck:
+      enable: true
+    serviceUrl:
+      defaultZone: http://user:8888@192.168.0.12:8761/eureka,http://user:8888@192.168.0.13:8761/eureka,http://user:8888@192.168.0.14:8761/eureka
+  instance:
+    metadataMap:
+      instanceId: ${spring.application.name}:${server.port}
+    preferIpAddress: true
+logging:
+  level:
+    root: info
+    com:
+      ikang:
+        mybatis:
+          mapper: debug
+server:
+  port: 9150
+swagger:
+  host: api.uat.daoyitong.com/cloud
+mybatis:
+  mapper-locations: classpath*:config/mybatis/mapper/*.xml
+  type-aliases-package: com.ikang.inquiry.entity
+endpoints:
+  restart:
+    enabled: true
+dythospital:
+  ids: 1530515622578692
+doctor:
+  cashDate: 13 #医生端当月提现日期限制
+  cashTimes: 100 #医生端当月提现次数限制
+  incomeRadio: 0.7 #医生收入比例
+cloud:
+  filesys:
+    urlAllPath: http://api.daoyitong.com/cloud/filesys/file/urlAllpath/byIds
+  coddata:
+    deps: http://api.daoyitong.com/cloud/docdata/remote/dep/getDepInfo
+    basedoc: http://api.daoyitong.com/cloud/docdata/remote/doc/selectDoctorByBaseDocId
+    getHospGradeByIds: http://api.daoyitong.com/cloud/docdata/remote/hosp/getHospGradeByIds
+admin:
+  account:
+    registeraccounts: http://192.168.220.96:81/admin/account/registerAccounts
+extra:
+  search:
+    getOrderInfo: http://api.daoyitong.com/cloud/extra/serviceOrder/getOrderInfo/
+  medical:
+    getdoclist: http://192.168.0.40:50303/serviceOrder/getdocList
+    list: http://192.168.0.40:50303/serviceOrder/list
+access:
+  rest:
+    getStandDepartments: http://api.daoyitong.com/pavo-access/rest/base/department/getStandDepartments
+    getUnStandDepartments: http://api.daoyitong.com/pavo-access/rest/base/department/getUnStandDepartments
+    queryHospGradeByHospIds: http://api.daoyitong.com/pavo-access/rest/base/hosp/queryHospGradeByHospIds
+roomservice:
+  double_room: http://api.daoyitong.com/roomservice/weapp/double_room/
+  live_room: http://api.daoyitong.com/roomservice/weapp/live_room/
+  multi_room: http://api.daoyitong.com/roomservice/weapp/multi_room/
+  utils: http://api.daoyitong.com/roomservice/weapp/utils/
+tencent:
+  double_room:
+    login: ${roomservice.double_room}login
+    logout: ${roomservice.double_room}logout
+    get_push_url: ${roomservice.double_room}get_push_url
+    get_room_list: ${roomservice.double_room}get_room_list
+    get_pushers: ${roomservice.double_room}get_pushers
+    create_room: ${roomservice.double_room}create_room
+    destroy_room: ${roomservice.double_room}destroy_room
+    add_pusher: ${roomservice.double_room}add_pusher
+    delete_pusher: ${roomservice.double_room}delete_pusher
+    pusher_heartbeat: ${roomservice.double_room}pusher_heartbeat
+  live_room:
+    login: ${roomservice.live_room}login
+    logout: ${roomservice.live_room}logout
+    get_push_url: ${roomservice.live_room}get_push_url
+    get_room_list: ${roomservice.live_room}get_room_list
+    get_pushers: ${roomservice.live_room}get_pushers
+    create_room: ${roomservice.live_room}create_room
+    destroy_room: ${roomservice.live_room}destroy_room
+    add_pusher: ${roomservice.live_room}add_pusher
+    delete_pusher: ${roomservice.live_room}delete_pusher
+    pusher_heartbeat: ${roomservice.live_room}pusher_heartbeat
+    merge_stream: ${roomservice.live_room}merge_stream
+    get_custom_info: ${roomservice.live_room}get_custom_info
+    set_custom_field: ${roomservice.live_room}set_custom_field
+    add_audience: ${roomservice.live_room}add_audience
+    delete_audience: ${roomservice.live_room}delete_audience
+    get_audiences: ${roomservice.live_room}get_audiences
+  multi_room:
+    login: ${roomservice.multi_room}login
+    logout: ${roomservice.multi_room}logout
+    get_push_url: ${roomservice.multi_room}get_push_url
+    get_room_list: ${roomservice.multi_room}get_room_list
+    get_pushers: ${roomservice.multi_room}get_pushers
+    create_room: ${roomservice.multi_room}create_room
+    destroy_room: ${roomservice.multi_room}destroy_room
+    add_pusher: ${roomservice.multi_room}add_pusher
+    delete_pusher: ${roomservice.multi_room}delete_pusher
+    pusher_heartbeat: ${roomservice.multi_room}pusher_heartbeat
+  utils:
+    get_login_info: ${roomservice.utils}get_login_info
+    get_test_pushurl: ${roomservice.utils}get_test_pushurl
+    get_test_rtmpaccurl: ${roomservice.utils}get_test_rtmpaccurl
+rest:
+  msg:
+    listmsg: http://api.daoyitong.com/api/v1/card/sendMsg
+service_price:
+  DYT007: 99999.99
+  DYT005: 99999.99
+  DYT004: 2000.00
+  DYT003: 500.00
+  DYT002: 60.00
+  DYT006: 99999.99
+  DYT008: 300.00";
+  DYT015: 80.00
+  DYT009:
+    spe: 400.00
+    fspe: 200.00
+    oth: 150.00
+  DYT010: 99999.99
+  DYT014:
+    spe: 400.00
+    fspe: 200.00
+    oth: 150.00
+  DYT016: 99999.99
+  DYT017: 500.00
+  DYT018: 2000.00
