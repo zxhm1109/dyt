@@ -139,3 +139,24 @@ tencent:
 rest:
   msg:
     listmsg: http://api.uat.daoyitong.com/api/v1/card/sendMsg
+service_price:
+  DYT007: 99999.99
+  DYT005: 99999.99
+  DYT004: 2000.00
+  DYT003: 500.00
+  DYT002: 60.00
+  DYT006: 99999.99
+  DYT008: 300.00";
+  DYT015: 80.00
+  DYT009:
+    spe: 400.00
+    fspe: 200.00
+    oth: 150.00
+  DYT010: 99999.99
+  DYT014:
+    spe: 400.00
+    fspe: 200.00
+    oth: 150.00
+  DYT016: 99999.99
+  DYT017: 500.00
+  DYT018: 2000.00
