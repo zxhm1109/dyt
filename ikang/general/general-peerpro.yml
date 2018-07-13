@@ -1,0 +1,60 @@
+spring:
+  application:
+    name: general
+eureka:
+  client:
+    healthcheck:
+      enable: true
+    serviceUrl:
+      defaultZone: http://user:8888@192.168.0.12:8761/eureka,http://user:8888@192.168.0.13:8761/eureka,http://user:8888@192.168.0.14:8761/eureka
+  instance:
+    metadataMap:
+      instanceId: ${spring.application.name}:${server.port}
+    preferIpAddress: true
+redis:
+  host: dyt-redis.ikang.com
+  port: 6379
+logging:
+  level:
+    root: info
+server:
+  port: 7000
+swagger:
+  host: api.daoyitong.com/cloud
+endpoints:
+  restart:
+    enabled: true
+zuul:
+  url: http://api.daoyitong.com/cloud #zuul地址，用以restTemplate调用
+service:
+  demo: rpc
+invoke:
+  demo:
+    FuGaoOutpatientInfo: ${zuul.url}/${service.demo}/v1/FuGaoOutpatientInfo #erTong加载科室
+    FuGaoOutDoctorInfo: ${zuul.url}/${service.demo}/v1/FuGaoOutDoctorInfo?MZDM={MZDM} #erTong加载某科室的所有医生
+    FuGaoGetPreResources: ${zuul.url}/${service.demo}/v1/FuGaoGetPreResources?KSDM={KSDM}&YSGH={YSGH}&KSRQ={KSRQ}&JSRQ={JSRQ}
+
+    getSrvGroup: ${zuul.url}/${service.demo}/v1/getSrvGroup?identifyID=FCD8EF688A02518AC7C27A22292CDC64&districtID=1&bookingTypeID={bookingTypeID}
+    getStaffList: ${zuul.url}/${service.demo}/v1/getStaffList?srvGroupID={srvGroupID}
+    
+    GetDeptInfo: ${zuul.url}/${service.demo}/v1/getDeptInfo #加载科室
+    GetItemInfo: ${zuul.url}/${service.demo}/v1/getItemInfo #加载所有医生
+    GetPlanInfo: ${zuul.url}/${service.demo}/v1/getPlanItem?fromDate={fromDate}&toDate={toDate} #获取出诊项目
+
+    DepartmentList: ${zuul.url}/${service.demo}/v1/departmentList #zhongliu加载科室
+    ExpertList: ${zuul.url}/${service.demo}/v1/expertList #zhongliu加载专家
+    ArrangelistByNumber: ${zuul.url}/${service.demo}/v1/arrangelistByNumber?fromDate={fromDate}&toDate={toDate} #zhongliu加载专家
+
+    GetZhongRiDepInfo: ${zuul.url}/${service.demo}/v1/getDepartmentInfo #zhongri加载所有科室
+    GetZhongRiDocInfo: ${zuul.url}/${service.demo}/v1/getdoctorInfo #zhongri加载所有医生
+    GetZhongRiResource: ${zuul.url}/${service.demo}/v1/getResource?bookingDate={bookingDate}&doctorId={doctorId} #jiuyuan加载排班
+    
+    GetJingAnDepInfo: ${zuul.url}/${service.demo}/v1/getDepartment #jingan加载所有科室
+    GetJingAnDocInfo: ${zuul.url}/${service.demo}/v1/getDoctor #jingan加载所有医生
+    GetJingAnResource: ${zuul.url}/${service.demo}/v1/getResourceInfo?ksdm={ksdm}&beginDate={beginDate}&endDate={endDate} #jingan加载号源
+    
+    GetYueYangDepInfo: ${zuul.url}/${service.demo}/v1/schedule/departments #yueyang加载所有科室
+    GetYueYangDocInfo: ${zuul.url}/${service.demo}/v1/schedule/advanceExpertQuery #yueyang加载所有医生
+    GetYueYangResource: ${zuul.url}/${service.demo}/v1/schedule/department/experts?registerType={registerType}&deptCode={deptCode}&status={status}&vendor={vendor} #yueyang加载号源
+    
+    getJingDongAccessToken: ${zuul.url}/${service.demo}/v1/jingdong/accessToken #京东获取accessToken
