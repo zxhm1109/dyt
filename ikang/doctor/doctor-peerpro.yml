@@ -47,3 +47,4 @@ pavo:
     url: http://192.168.0.40:50303
     mapping: /serviceOrder/list
     getOrderInfo: /serviceOrder/getOrderInfo/
+    updateResultMarks: /serviceOrder/updateResultMarks
