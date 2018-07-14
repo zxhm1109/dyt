@@ -63,8 +63,8 @@ endpoints:
 dythospital:
   ids: 1530515622578692
 doctor:
-  cashDate: 13 #医生端当月提现日期限制
-  cashTimes: 100 #医生端当月提现次数限制
+  cashDate: 6 #医生端当月提现日期限制
+  cashTimes: 0 #医生端当月提现次数限制
   incomeRadio: 0.7 #医生收入比例
 cloud:
   filesys:
