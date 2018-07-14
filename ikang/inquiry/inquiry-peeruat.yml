@@ -151,7 +151,7 @@ service_price:
   DYT009:
     spe: 400.00
     fspe: 200.00
-    oth: 150.00
+    oth: 0.01
   DYT010: 99999.99
   DYT014:
     spe: 400.00
